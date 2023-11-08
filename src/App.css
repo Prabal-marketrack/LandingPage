@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "Cantarell-Bold";
+  src: url("./../public/fonts/Cantarell/Cantarell-Bold.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("./../public/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url("./../public/fonts/Poppins/Poppins-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url("./../public/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter-Regular";
+  src: url("./../public/fonts/Inter/Inter-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter-Medium";
+  src: url("./../public/fonts/Inter/Inter-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "InterTight-Regular";
+  src: url("./../public/fonts/InterTight/InterTight-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "InterTight-LightItalic";
+  src: url("./../public/fonts/InterTight/InterTight-LightItalic.ttf") format("truetype");
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+
+body {
+  display: grid;
+  background-color: #000000;
+  color: white;
+  font-family: 'Poppins-Regular', sans-serif;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+hr {
+  padding: 0;
+  margin: 0;
+}
+
+.pr-20 {
+  padding-right: 20px;
+}
+
+.p-10 {
+  padding: 10px 0;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.alignItems-center {
+  align-items: center;
+}

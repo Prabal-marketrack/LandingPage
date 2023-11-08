@@ -1,0 +1,159 @@
+.concall {
+    position: relative;
+}
+
+.concall-heading {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.concall-heading-text {
+    font-family: 'Poppins-Regular';
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.concall-body {
+    transition: all 0.3s;
+    /* animation: lottieScaleIn 2s forwards 9s; */
+}
+
+/* CSS for toggle button off state - Starts*/
+
+.concall-body-off {
+    margin-top: 26px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    animation: appear 1s;
+}
+
+.infosys-header-off {
+    padding: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.concall-lottie {
+    position: relative;
+    height: 233px;
+    width: 506px;
+    padding-top: 30px;
+}
+
+/* CSS for toggle button off state - Ends*/
+
+/* CSS for toggle button - ON state */
+
+.concall-body-on {
+    margin-bottom: 15px;
+    align-items: center;
+    animation: appear 2s;
+}
+
+.concall-carousel {
+    position: relative;
+    background-color: #222222;
+    border-radius: 7.5px;
+    transition: all 0.2s;
+}
+
+.headermask {
+    background-color: #2BC1FF;
+    opacity: 7%;
+    height: 70px;
+    width: 530px;
+    position: relative;
+    border-radius: 7.5px;
+}
+
+.infosys-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    height: 70px;
+}
+
+.verticalRule {
+    width: 1px;
+    height: 52px;
+    background-color: #707070;
+    margin-left: 12px;
+}
+
+.infosys-text {
+    font-family: 'Poppins-Regular';
+    font-size: 19px;
+    margin-left: 20px;
+    color: #DDDDDD;
+}
+
+.carousel-buttons {
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+}
+
+.carousel-button {
+    padding: 5px 20px;
+    color: #AAAAAA;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'InterTight-Regular';
+    transition: all 0.4s;
+}
+
+.button-active {
+    color: #fff;
+    background-color: #5b5959;
+    border-radius: 50px;
+    font-family: 'Inter-Medium';
+}
+
+/* Carousel card css starts */
+
+.card-container {
+    display: flex;
+    margin-left: 44px;
+}
+
+.carousel-dots {
+    position: relative;
+    bottom: 18.5px;
+    margin-top: 36px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.carousel-dots .dot {
+    width: 7.5px;
+    height: 7.5px;
+    margin: 0 2px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.concall-footer {
+    position: absolute;
+    align-items: center;
+    top: 680px;
+    gap: 5px;
+}
+
+.blurred-text {
+    filter: blur(1.5px);
+}
