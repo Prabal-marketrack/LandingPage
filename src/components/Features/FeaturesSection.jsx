@@ -126,7 +126,7 @@ const FeaturesSection = () => {
             trigger: '.center-mask', // The element you want to trigger the first part of the animation
             start: 'bottom center', // Start when the bottom of the trigger element hits the bottom of the viewport
             animation: tl1, // Use the first created GSAP timeline (tl1)
-            markers: true,
+            markers: false,
             scrub: 2,
             end: "+=60%",
             snap: {
@@ -146,7 +146,7 @@ const FeaturesSection = () => {
             trigger: '.center-mask2', // The element you want to trigger the first part of the animation
             start: '60% center', // Start when the bottom of the trigger element hits the bottom of the viewport
             animation: tl2, // Use the first created GSAP timeline (tl1)
-            markers: true,
+            markers: false,
             scrub: 2,
             end: "+=10%",
             snap: {
