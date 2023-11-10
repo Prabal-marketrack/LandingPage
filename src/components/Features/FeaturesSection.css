@@ -5,19 +5,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: red; */
     /* animation: LastAnimation 10s forwards 10s; */
 }
-.SecondTrigger {
+.center-mask2{
     position: relative;
     width: 100vw;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* background-color: rgba(255, 255, 0, 0.5); */
 }
-
 
 @keyframes LastAnimation {
     0% {
@@ -40,7 +34,7 @@
     gap: 27px;
     padding-top: 60px;
     grid-template-rows: repeat(10, minmax(550px, auto));
-    scale: 1
+    
     /* animation: scaleIn 10s forwards 10s; */
 }
 
@@ -165,10 +159,10 @@
     border-radius: 4px;
     transform: scale(3.5);
 }
-
+/* 
 .hide-everything {
-    /* animation: hideIn 1s forwards 17s; */
-}
+    animation: hideIn 1s forwards 17s;
+} */
 
 @keyframes hideIn {
     100% {
