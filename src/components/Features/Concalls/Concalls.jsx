@@ -57,13 +57,13 @@ const Concalls = () => {
                                 loop={false}
                             />
                         </div>
-                        <div style={{ position: 'relative', paddingTop: '70px' }}>
-                            <span style={{ fontSize: '34px' }}>25 Pages</span>
+                        <div style={{ position: 'relative', paddingTop: '4.86vw' }}>
+                            <span style={{ fontSize: '2.43vw' }}>25 Pages</span>
                         </div>
                     </div>
                 }
                 {isChecked && <div className='concall-body-on flex-col'>
-                    <div className='concall-carousel' style={{ height: (currentIndex === 0) ? '530px' : ((currentIndex===1)&&!isCardChecked) ?'473px': ((currentIndex===1)&&isCardChecked) ?'608px' : '593px' }}>
+                    <div className='concall-carousel' style={{ height: (currentIndex === 0) ? '36.81vw' : ((currentIndex===1)&&!isCardChecked) ? '32.85vw': ((currentIndex===1)&&isCardChecked) ?'42.22vw' : '41.18vw' }}>
                         <div className="headermask"></div>
                         <div className='infosys-header'>
                             <img src={infosys} alt="" height={'60px'} style={{ marginLeft: '108px' }} />
