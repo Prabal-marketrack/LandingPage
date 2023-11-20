@@ -1,63 +1,26 @@
-.center-mask {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* animation: LastAnimation 10s forwards 10s; */
-}
-.center-mask2{
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-}
-
-@keyframes LastAnimation {
-    0% {
-        overflow: visible;
-    }
-
-    20% {
-        overflow: visible;
-    }
-
-    100% {
-        overflow: hidden;
-    }
+.outer-container {
+    position: absolute;
+    height: 400vw;
+    top: -320.6vw;
+    left: 0;
 }
 
 .grid-container {
-    z-index: 0;
+    z-index: -1;
     display: grid;
-    grid-template-columns: repeat(30, 625px);
-    gap: 27px;
-    padding-top: 60px;
-    grid-template-rows: repeat(10, minmax(550px, auto));
-    
+    grid-template-columns: repeat(30, 43.4vw);
+    grid-template-rows: repeat(10, minmax(38.2vw, auto));
+    gap : 27px;
+    padding-left: 6vw;
+    transform-origin: 0% 100%;
     /* animation: scaleIn 10s forwards 10s; */
 }
 
-@keyframes scaleIn {
-    10% {
-        scale: 1;
-        gap: 27px;
-    }
-
-    40% {
-        scale: 0.3;
-        gap: 40px;
-    }
-
-    70% {
-        scale: 0.3;
-        gap: 40px;
-    }
-
-    100% {
-        scale: 0.1;
-        gap: 60px;
-    }
+.footer{
+    position: relative;
+    height: 400vw;
+    width: 100vw;
+    /* background-color: red; */
 }
 
 .grid-item {
@@ -66,39 +29,25 @@
     justify-content: center;
     font-size: 30px;
     color: #fff;
-    width: 625px;
-    height: 550px;
+    width: 43.4vw;
+    height: 38.2vw;
     background-color: #151515;
     opacity: 0;
+    /* border: 1px solid white; */
     /* animation: gridHide 14s forwards; */
 }
 
-@keyframes gridHide {
-    0% {
-        opacity: 0;
-    }
-
-    90% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-        border-radius: 70px;
-    }
-}
-
 .news-section {
-    width: 625px;
-    height: 500px;
+    width: 43.4vw;
+    height: 34.7vw;
     background-color: #151515;
     border-radius: 7.5px;
     /* animation: sizeAnimation 2s forwards 9s; */
 }
 
 .concall-section {
-    width: 625px;
-    height: 609px;
+    width: 43.4vw;
+    height: 42.3vw;
     background-color: #151515;
     border-radius: 7.5px;
     transition: all 0.2s;
@@ -107,62 +56,43 @@
 
 .corporate-section {
     position: relative;
-    width: 625px;
-    height: 550px;
+    width: 43.4vw;
+    height: 38.2vw;
     background-color: #151515;
     border-radius: 7.5px;
-    /* animation: corporateAnimate 2s forwards 9s; */
 }
 
-@keyframes corporateAnimate {
-    100% {
-        height: 550px;
-        width: 625px;
-        top: 0;
-    }
-}
+
 
 .forensic-section {
-    width: 625px;
-    height: 460px;
+    width: 43.4vw;
+    height: 31.95vw;
     background-color: #151515;
     border-radius: 7.5px;
-    /* animation: sizeAnimation 2s forwards 9s; */
-}
-
-@keyframes sizeAnimation {
-    100% {
-        height: 550px;
-        width: 625px;
-    }
 }
 
 .skeleton-block {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 120px;
+    gap: 8.33vw;
 }
 
 .skeleton-1 {
-    width: 130px;
-    height: 19px;
+    width: 9.03vw;
+    height: 1.32vw;
     background-color: #777777;
     border-radius: 4px;
     transform: scale(3.5);
 }
 
 .skeleton-2 {
-    width: 90px;
-    height: 19px;
+    width: 6.25vw;
+    height: 1.32vw;
     background-color: #777777;
     border-radius: 4px;
     transform: scale(3.5);
 }
-/* 
-.hide-everything {
-    animation: hideIn 1s forwards 17s;
-} */
 
 @keyframes hideIn {
     100% {
@@ -172,47 +102,30 @@
 
 .complexity-text {
     position: absolute;
-    opacity: 0;
-    scale: 0;
-    top: 80%;
+    opacity: 1;
+    scale: 1;
+    top: 91%;
     left: 28vw;
     font-size: 52.5px;
-    /* animation: fadeIN 1.5s forwards 21s; */
+    z-index: 2;
 }
 
-@keyframes fadeIN {
-    100% {
-        opacity: 1;
-    }
-}
+
 
 
 .grid-email {
+    z-index: 2;
     position: absolute;
     top: 93%;
-    opacity: 0;
-    width: 540px;
-    height: 137px;
+    width: 37.5vw;
+    height: 9.51vw;
     left: 32vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     opacity: 0;
     scale: 0
-    /* animation: email-translate 1s forwards 22s; */
-}
-
-@keyframes email-translate {
-    100% {
-        top: 60%;
-        opacity: 1;
-    }
-}
-
-@keyframes lottieScaleIn {
-    100%{
-        scale: 0;
-    }
+    
 }
 
 

@@ -23,7 +23,7 @@
 /* CSS for toggle button off state - Starts*/
 
 .concall-body-off {
-    margin-top: 26px;
+    margin-top: 1.81vw;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -42,9 +42,9 @@
 
 .concall-lottie {
     position: relative;
-    height: 233px;
-    width: 506px;
-    padding-top: 30px;
+    height: 16.18vw;
+    width: 35.14vw;
+    padding-top: 2.08vw;
 }
 
 /* CSS for toggle button off state - Ends*/
@@ -67,8 +67,8 @@
 .headermask {
     background-color: #2BC1FF;
     opacity: 7%;
-    height: 70px;
-    width: 530px;
+    height: 4.86vw;
+    width: 36.81vw;
     position: relative;
     border-radius: 7.5px;
 }
@@ -79,7 +79,7 @@
     align-items: center;
     position: absolute;
     top: 0px;
-    height: 70px;
+    height: 4.86vw;
 }
 
 .verticalRule {

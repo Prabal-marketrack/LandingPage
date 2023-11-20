@@ -1,5 +1,5 @@
 .card {
-    width: 418px;
+    width: 29.03vw;
 }
 
 .card input {
@@ -40,11 +40,11 @@
 }
 
 .card #cb1:checked~.content-box1 {
-    max-height: 304px;
+    max-height: 21.11vw;
 }
 
 .card #cb2:checked~.content-box2 {
-    max-height: 304px;
+    max-height: 21.11vw;
 }
 
 .content-box1 {
