@@ -10,14 +10,13 @@
     display: grid;
     grid-template-columns: repeat(30, 43.4vw);
     grid-template-rows: repeat(10, minmax(38.2vw, auto));
-    /* position: relative;  */
     gap : 27px;
     padding-left: 6vw;
+    transform-origin: 0% 100%;
     /* animation: scaleIn 10s forwards 10s; */
 }
 
 .footer{
-    z-index: -2;
     position: relative;
     height: 400vw;
     width: 100vw;
@@ -34,7 +33,7 @@
     height: 38.2vw;
     background-color: #151515;
     opacity: 0;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     /* animation: gridHide 14s forwards; */
 }
 
@@ -103,20 +102,21 @@
 
 .complexity-text {
     position: absolute;
-    opacity: 0;
-    scale: 0;
-    top: 80%;
+    opacity: 1;
+    scale: 1;
+    top: 91%;
     left: 28vw;
     font-size: 52.5px;
+    z-index: 2;
 }
 
 
 
 
 .grid-email {
+    z-index: 2;
     position: absolute;
     top: 93%;
-    opacity: 0;
     width: 37.5vw;
     height: 9.51vw;
     left: 32vw;
