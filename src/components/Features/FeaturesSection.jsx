@@ -80,14 +80,14 @@ const FeaturesSection = () => {
 
 
             ScrollTrigger.create({
-                trigger: ".grid-container",
-                start: 'bottom bottom',
+                trigger: ".forensic-section",
+                start: 'bottom bottom-=50',
                 end: "bottom bottom",
                 endTrigger: ".footer",
                 scrub: true,
                 animation: tl1,
                 markers: true,
-                pin: true,
+                pin: ".grid-container",
                 pinSpacing: true,
                 snap: {
                     snapTo: "labelsDirectional",
