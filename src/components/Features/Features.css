@@ -82,7 +82,7 @@
     position: absolute;
     bottom: 2px;
     left: 0;
-    width: 312px;
+    width: 21.67vw;
     height: 3px;
     background-image: linear-gradient(to right, #FF2E2E 0%, #FF2E2E 49%, transparent 49%, transparent 51%, #66FF00 51%, #66FF00 100%);
     background-size: 100% 100%;
@@ -155,7 +155,7 @@
     font-family: 'Cantarell-Bold', sans-serif;
     font-size: 34.5px;
     padding-right: 22px;
-    width: 270px;
+    width: 18.75vw;
 }
 
 .exclusive-brand-heading:after {
@@ -163,7 +163,7 @@
     position: absolute;
     bottom: -2px;
     left: 0;
-    width: 270px;
+    width: 18.75vw;
     height: 3px;
     background-image: linear-gradient(to right, #FF2E2E 0%, #FF2E2E 49%, transparent 49%, transparent 51%, #66FF00 51%, #66FF00 100%);
     background-size: 100% 100%;
@@ -173,9 +173,9 @@
 
 .toggle-button {
     background-color: #252525;
-    width: 102px;
-    height: 42px;
-    border-radius: 50px;
+    width: 7.08vw;
+    height: 2.91vw;
+    border-radius: 3.472vw;
     display: flex;
     text-transform: uppercase;
     color: white;

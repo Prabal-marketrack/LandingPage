@@ -102,7 +102,7 @@
 
 .complexity-text {
     position: absolute;
-    opacity: 1;
+    opacity: 0;
     scale: 1;
     top: 93.5%;
     left: 28vw;
@@ -124,7 +124,7 @@
     flex-direction: column;
     align-items: center;
     opacity: 0;
-    scale: 0
+    scale: 1;
     
 }
 
