@@ -18,10 +18,9 @@ const FeaturesSection = () => {
     let main = document.querySelector(".about")
 
     useLayoutEffect(() => {
-
         let ctx = gsap.context(() => {
+            
             const tl1 = gsap.timeline();
-            // const gridContainer = document.querySelector('.grid-container');
             tl1
                 .addLabel("start")
                 .to('.news-lottie', {
@@ -69,15 +68,12 @@ const FeaturesSection = () => {
                 .to('.complexity-text', {
                     opacity: 1,
                     scale: 1,
-                    // x: gridContainer.getBoundingClientRect().x,
-                    // y: gridContainer.getBoundingClientRect().y,
                 }, ">")
                 .to('.grid-email', {
                     opacity: 1,
                     scale: 1,
                 }, "<")
                 .addLabel('end')
-
 
             ScrollTrigger.create({
                 trigger: ".forensic-section",
@@ -86,13 +82,13 @@ const FeaturesSection = () => {
                 endTrigger: ".footer",
                 scrub: true,
                 animation: tl1,
-                markers: true,
                 pin: ".grid-container",
                 pinSpacing: true,
                 snap: {
-                    snapTo: "labelsDirectional",
-                    duration: 2,
-                },
+                        snapTo: "labelsDirectional",
+                        duration: 2,
+                    },
+                markers: true,
             })
         });
 

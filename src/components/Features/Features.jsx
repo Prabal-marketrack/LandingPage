@@ -39,10 +39,13 @@ const Features = () => {
         const ctx = gsap.context(() => {
             tl.current = gsap.timeline({
                 scrollTrigger: {
+                    id: "line_anim",
                     trigger: el.current,
                     scrub: true,
                     start: "40% 90%",
                     end: "bottom 60%",
+                    markers: true,
+                    onLeave: () => {ScrollTrigger.refresh();}
                 }
             })
                 .to(".box1", {
@@ -50,7 +53,7 @@ const Features = () => {
                     ease: 'power2.in',
                 })
                 .to(".vertical-line", {
-                    height: '150px',
+                    height: '10.41vw',
                     ease: 'power1.in'
                 })
                 .to(".box4", {
