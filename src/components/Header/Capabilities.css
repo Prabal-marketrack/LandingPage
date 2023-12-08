@@ -1,7 +1,7 @@
 .capabilities {
     box-sizing: content-box;
     color: black;
-    height: 67.5px;
+    height: 4.7vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,7 +30,7 @@
     background: linear-gradient(0deg, transparent, white, transparent) bottom / var(--d, 50%) 1.5px no-repeat;
     animation: fade_rule 10s infinite;
     animation-delay: 1s;
-    transition: 0.5s
+    transition: 0.5s;
 }
 .capabilities span {
     display: flex;
@@ -131,5 +131,11 @@
 
     100% {
         transform: translateY(-400%);
+    }
+}
+
+@media (max-width: 475px){
+    .capabilities{
+        height: 8.8vw;
     }
 }

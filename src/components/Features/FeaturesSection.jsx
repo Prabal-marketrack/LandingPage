@@ -15,11 +15,11 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 const FeaturesSection = () => {
 
     const { isChecked } = useStateContext();
-    let main = document.querySelector(".about")
+    // let main = document.querySelector(".about");
 
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
-            
+
             const tl1 = gsap.timeline();
             tl1
                 .addLabel("start")
@@ -38,29 +38,41 @@ const FeaturesSection = () => {
                 .to('.news-section', {
                     height: "38.19vw",
                     width: "43.4vw",
+                    borderRadius: '50px',
                 }, "<")
                 .to('.concall-section', {
                     height: "38.19vw",
                     width: "43.4vw",
+                    borderRadius: '50px',
                 }, "<")
                 .to('.corporate-section', {
                     height: "38.19vw",
                     width: "43.4vw",
+                    borderRadius: '50px',
                     top: 0
                 }, "<")
                 .to('.forensic-section', {
                     height: "38.19vw",
                     width: "43.4vw",
+                    borderRadius: '50px',
                 }, "<")
                 .to('.grid-item', {
                     opacity: 1,
                 }, "<")
-                .to('.grid-container', {
-                    scale: 0.3,
+                .to('.hide-everything', {
+                    fontSize: '90px',
                 }, "<")
+                .to('.grid-container', {
+                    scale: 0.26,
+                    gap: '40px',
+                }, "<")
+                .set('.footer', {
+                    zIndex: 1,
+                })
                 .addLabel("scaled")
                 .to('.grid-container', {
-                    scale: 0.1,
+                    scale: 0.11,
+                    gap: '60px',
                 }, ">")
                 .to('.hide-everything', {
                     opacity: 0,
@@ -85,9 +97,9 @@ const FeaturesSection = () => {
                 pin: ".grid-container",
                 pinSpacing: true,
                 snap: {
-                        snapTo: "labelsDirectional",
-                        duration: 2,
-                    },
+                    snapTo: "labelsDirectional",
+                    duration: 2,
+                },
                 markers: true,
             })
         });
@@ -99,7 +111,7 @@ const FeaturesSection = () => {
     return (
         <>
             <div className="outer-container">
-                <div className="grid-container" style={{ paddingTop: isChecked ? '50.83vw' : '40.36vw' }}>
+                <div className="grid-container">
                     <div className="grid-item"></div>
                     <div className="grid-item"></div>
                     <div className="grid-item"></div>
@@ -280,6 +292,44 @@ const FeaturesSection = () => {
                     <div className="grid-item"></div>
                     <div className="grid-item"></div>
                     <div className="grid-item"></div>
+                    <div className="grid-item"><span className='hide-everything'>Valuation</span></div>
+                    <div className="grid-item">
+                        <div className='flex-col alignItems-center hide-everything'>
+                            <span>Mutual</span>
+                            <span>Funds</span>
+                        </div>
+                    </div>
+                    <div className="grid-item">
+                        <div className='flex-col alignItems-center hide-everything'>
+                            <span>Supply</span>
+                            <span>Chains</span>
+                        </div>
+                    </div>
+                    <div className="grid-item"><span className='hide-everything'>Forex</span></div>
+                    <div className="grid-item">
+                        <div className="skeleton-block hide-everything">
+                            <div className='skeleton-1'></div>
+                            <div className='skeleton-2'></div>
+                        </div>
+                    </div>
+                    <div className="grid-item">
+                        <div className="skeleton-block hide-everything">
+                            <div className='skeleton-1'></div>
+                            <div className='skeleton-2'></div>
+                        </div>
+                    </div>
+                    <div className="grid-item">
+                        <div className="skeleton-block hide-everything">
+                            <div className='skeleton-1'></div>
+                            <div className='skeleton-2'></div>
+                        </div>
+                    </div>
+                    <div className="grid-item">
+                        <div className="skeleton-block hide-everything">
+                            <div className='skeleton-1'></div>
+                            <div className='skeleton-2'></div>
+                        </div>
+                    </div>
                     <div className="grid-item"></div>
                     <div className="grid-item"></div>
                     <div className="grid-item"></div>
@@ -302,22 +352,44 @@ const FeaturesSection = () => {
                     <div className="grid-item"></div>
                     <div className="grid-item"></div>
                     <div className="grid-item"></div>
-                    <div className="grid-item"></div>
-                    <div className="grid-item"></div>
-                    <div className="grid-item"></div>
-                    <div className="grid-item"></div>
-                    <div className="grid-item"></div>
-                    <div className="grid-item"></div>
-                    <div className="grid-item"></div>
-                    <div className="grid-item"></div>
-                    <div className="grid-item"></div>
-                    <div className="grid-item"></div>
-                    <div className="grid-item"></div>
-                    <div className="grid-item"></div>
-                    <div className="grid-item"></div>
-                    <div className="grid-item"></div>
-                    <div className="grid-item"></div>
-                    <div className="grid-item"></div>
+                    <div className="grid-item"><span className='hide-everything'>Trade</span></div>
+                    <div className="grid-item">
+                        <div className='flex-col alignItems-center hide-everything'>
+                            <span>Govt.</span>
+                            <span>Data</span>
+                        </div>
+                    </div>
+                    <div className="grid-item">
+                        <div className='flex-col alignItems-center hide-everything'>
+                            <span>Alternate</span>
+                            <span>Data</span>
+                        </div>
+                    </div>
+                    <div className="grid-item"><span className=' hide-everything'>KPIs</span></div>
+                    <div className="grid-item">
+                        <div className="skeleton-block hide-everything">
+                            <div className='skeleton-1'></div>
+                            <div className='skeleton-2'></div>
+                        </div>
+                    </div>
+                    <div className="grid-item">
+                        <div className="skeleton-block hide-everything">
+                            <div className='skeleton-1'></div>
+                            <div className='skeleton-2'></div>
+                        </div>
+                    </div>
+                    <div className="grid-item">
+                        <div className="skeleton-block hide-everything">
+                            <div className='skeleton-1'></div>
+                            <div className='skeleton-2'></div>
+                        </div>
+                    </div>
+                    <div className="grid-item">
+                        <div className="skeleton-block hide-everything">
+                            <div className='skeleton-1'></div>
+                            <div className='skeleton-2'></div>
+                        </div>
+                    </div>
                     <div className="grid-item"></div>
                     <div className="grid-item"></div>
                     <div className="grid-item"></div>
@@ -342,6 +414,42 @@ const FeaturesSection = () => {
                     <div className="grid-item"></div>
                     <div className="news-section"><News /></div>
                     <div className="concall-section" style={{ height: isChecked ? '56.6vw' : '42.29vw' }}><Concalls /></div>
+                    <div className="grid-item">
+                        <div className='flex-col alignItems-center hide-everything'>
+                            <span>Annual</span>
+                            <span>Report</span>
+                        </div>
+                    </div>
+                    <div className="grid-item">
+                        <div className='flex-col alignItems-center hide-everything'>
+                            <span>Raw</span>
+                            <span>Materials</span>
+                        </div>
+                    </div>
+                    <div className="grid-item">
+                        <div className="skeleton-block hide-everything">
+                            <div className='skeleton-1'></div>
+                            <div className='skeleton-2'></div>
+                        </div>
+                    </div>
+                    <div className="grid-item">
+                        <div className="skeleton-block hide-everything">
+                            <div className='skeleton-1'></div>
+                            <div className='skeleton-2'></div>
+                        </div>
+                    </div>
+                    <div className="grid-item">
+                        <div className="skeleton-block hide-everything">
+                            <div className='skeleton-1'></div>
+                            <div className='skeleton-2'></div>
+                        </div>
+                    </div>
+                    <div className="grid-item">
+                        <div className="skeleton-block hide-everything">
+                            <div className='skeleton-1'></div>
+                            <div className='skeleton-2'></div>
+                        </div>
+                    </div>
                     <div className="grid-item"></div>
                     <div className="grid-item"></div>
                     <div className="grid-item"></div>
@@ -364,20 +472,34 @@ const FeaturesSection = () => {
                     <div className="grid-item"></div>
                     <div className="grid-item"></div>
                     <div className="grid-item"></div>
-                    <div className="grid-item"></div>
-                    <div className="grid-item"></div>
-                    <div className="grid-item"></div>
-                    <div className="grid-item"></div>
-                    <div className="grid-item"></div>
-                    <div className="grid-item"></div>
-                    <div className="corporate-section" style={{ top: isChecked ? '-21.53vw' : '-7.29vw' }}><CorporateFillings /></div>
+                    <div className="corporate-section" style={{ top: '-7.29vw' }}><CorporateFillings /></div>
                     <div className="forensic-section"><Forensic /></div>
-                    <div className="grid-item"></div>
-                    <div className="grid-item"></div>
-                    <div className="grid-item"></div>
-                    <div className="grid-item"></div>
-                    <div className="grid-item"></div>
-                    <div className="grid-item"></div>
+                    <div className="grid-item triggerClass"><span className='hide-everything'>Employees</span></div>
+                    <div className="grid-item"><span className='hide-everything'>Sentiment</span></div>
+                    <div className="grid-item">
+                        <div className="skeleton-block hide-everything">
+                            <div className='skeleton-1'></div>
+                            <div className='skeleton-2'></div>
+                        </div>
+                    </div>
+                    <div className="grid-item">
+                        <div className="skeleton-block hide-everything">
+                            <div className='skeleton-1'></div>
+                            <div className='skeleton-2'></div>
+                        </div>
+                    </div>
+                    <div className="grid-item">
+                        <div className="skeleton-block hide-everything">
+                            <div className='skeleton-1'></div>
+                            <div className='skeleton-2'></div>
+                        </div>
+                    </div>
+                    <div className="grid-item">
+                        <div className="skeleton-block hide-everything">
+                            <div className='skeleton-1'></div>
+                            <div className='skeleton-2'></div>
+                        </div>
+                    </div>
                     <div className="grid-item"></div>
                     <div className="grid-item"></div>
                     <div className="grid-item"></div>

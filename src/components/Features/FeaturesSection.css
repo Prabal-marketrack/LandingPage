@@ -1,25 +1,27 @@
 .outer-container {
     position: absolute;
     height: 400vw;
-    top: -320.6vw;
+    top: -279vw;
     left: 0;
 }
 
 .grid-container {
-    z-index: -1;
+    z-index: 0;
     display: grid;
     grid-template-columns: repeat(30, 43.4vw);
     grid-template-rows: repeat(10, minmax(38.2vw, auto));
-    gap : 27px;
+    gap: 27px;
     padding-left: 6vw;
+    /* padding-top: 40.36vw; */
     transform-origin: 0% 100%;
     /* animation: scaleIn 10s forwards 10s; */
 }
 
-.footer{
+.footer {
     position: relative;
     height: 400vw;
     width: 100vw;
+    z-index: -1;
     /* background-color: red; */
 }
 
@@ -31,6 +33,7 @@
     color: #fff;
     width: 43.4vw;
     height: 38.2vw;
+    border-radius: 50px;
     background-color: #151515;
     opacity: 0;
     /* border: 1px solid white; */
@@ -41,7 +44,7 @@
     width: 43.4vw;
     height: 34.7vw;
     background-color: #151515;
-    border-radius: 7.5px;
+    border-radius: 10px;
     /* animation: sizeAnimation 2s forwards 9s; */
 }
 
@@ -49,7 +52,7 @@
     width: 43.4vw;
     height: 42.3vw;
     background-color: #151515;
-    border-radius: 7.5px;
+    border-radius: 10px;
     transition: all 0.2s;
     /* animation: sizeAnimation 2s forwards 9s; */
 }
@@ -59,16 +62,14 @@
     width: 43.4vw;
     height: 38.2vw;
     background-color: #151515;
-    border-radius: 7.5px;
+    border-radius: 10px;
 }
-
-
 
 .forensic-section {
     width: 43.4vw;
     height: 31.95vw;
     background-color: #151515;
-    border-radius: 7.5px;
+    border-radius: 10px;
 }
 
 .skeleton-block {
@@ -80,7 +81,7 @@
 
 .skeleton-1 {
     width: 9.03vw;
-    height: 1.32vw;
+    height: 1.4vw;
     background-color: #777777;
     border-radius: 4px;
     transform: scale(3.5);
@@ -88,35 +89,27 @@
 
 .skeleton-2 {
     width: 6.25vw;
-    height: 1.32vw;
+    height: 1.4vw;
     background-color: #777777;
     border-radius: 4px;
     transform: scale(3.5);
 }
 
-@keyframes hideIn {
-    100% {
-        opacity: 0;
-    }
-}
 
 .complexity-text {
     position: absolute;
     opacity: 0;
     scale: 1;
-    top: 93.5%;
+    top: 90.5%;
     left: 28vw;
     font-size: 52.5px;
     z-index: 2;
 }
 
-
-
-
 .grid-email {
     z-index: 2;
     position: absolute;
-    top: 95%;
+    top: 92%;
     width: 37.5vw;
     height: 9.51vw;
     left: 32vw;
@@ -125,7 +118,4 @@
     align-items: center;
     opacity: 0;
     scale: 1;
-    
 }
-
-

@@ -36,7 +36,7 @@ const Navbar = () => {
     <nav>
       <div className={`navbar ${triggered ? 'inactive' : "active"}`}>
         <div className="header">
-          <div className="heading-container" style={{ paddingLeft: '28.5px' }}>
+          <div className="heading-container p-left">
             <h1 className="underlined-heading">MARKETRACK</h1>
           </div>
           <div className='announcement-heading'>
@@ -48,7 +48,7 @@ const Navbar = () => {
       <div className={`navbar-2 ${triggered ? 'active' : "inactive"}`}>
         <div className="navbar-mask"></div>
         <div className="header">
-          <div className="heading-container" style={{ paddingLeft: '28.5px' }}>
+          <div className="heading-container p-left">
             <h1 className="underlined-heading">MARKETRACK</h1>
           </div>
           <div className='announcement-heading'>
