@@ -19,7 +19,7 @@
     opacity: 0;
 }
 
-.box4 {
+.box3 {
     opacity: 0;
 }
 
@@ -194,8 +194,8 @@
     background-color: white;
     border-radius: 100%;
     position: absolute;
-    left: 5px;
-    top: 5px;
+    left: 8px;
+    top: 6px;
 }
 
 input:checked~.toggle-button-css {
@@ -221,4 +221,14 @@ input:checked~.toggle-button-css .slider {
 
 .toggle-button-css {
     cursor: pointer;
+}
+
+
+/* mobile responsive css */
+
+@media (max-width: 475px) {
+    .gradient-background {
+        top: 0px;
+        height: 13.67vh;
+    }
 }

@@ -243,3 +243,33 @@ input:-internal-autofill-selected {
         opacity: 1;
     }
 }
+
+/* Mobile Responsive Design */
+
+@media (max-width: 475px) {
+    .hero-form {
+        height: 11.3vh;
+        font-size: 2.93vw;
+        top: 4.68vh;
+    }
+
+    .hero-form-heading {
+        padding-bottom: 11px;
+    }
+
+    .hero-form-input {
+        padding: 5px;
+    }
+
+    .hero-form-input input {
+        font-size: 3.34vw;
+        padding-left: 5.4vw;
+        width: 30vw;
+    }
+
+    .hero-form-button {
+        font-size: 3.4vw;
+        padding: 4px 5px;
+        padding-left: 10px;
+    }
+}

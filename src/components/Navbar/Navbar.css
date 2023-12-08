@@ -13,7 +13,6 @@ nav {
 
 .navbar {
     height: 80px;
-    /* padding-left: 28.5px; */
     display: flex;
     position: absolute;
 }
@@ -28,11 +27,15 @@ nav {
     text-align: center;
 }
 
+.p-left {
+    padding-left: 28.5px;
+}
+
 .underlined-heading {
     position: relative;
     display: inline-block;
     font-family: 'Cantarell-Bold', sans-serif;
-    font-size: 24.75px;
+    font-size: 25px;
 }
 
 .underlined-heading::after {
@@ -114,13 +117,15 @@ nav {
     background: transparent;
     backdrop-filter: blur(50px);
 }
-.navbar-mask{
+
+.navbar-mask {
     position: absolute;
     width: 100%;
     height: 80px;
     background-color: #fff;
     opacity: 10%;
 }
+
 .nav-email-form {
     position: fixed;
     right: 29px;
@@ -178,7 +183,7 @@ nav {
     border: none;
 }
 
-.email-arrow-button{
+.email-arrow-button {
     background-color: #278AFF;
     border-radius: 37.5px;
     height: 37.5px;
@@ -187,4 +192,49 @@ nav {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+
+/* Mobile design css */
+
+@media (max-width: 475px) {
+    nav {
+        padding-top: 6.3vh;
+        height: 17vw;
+        padding-bottom: 4.2vh;
+    }
+
+    .navbar {
+        height: 17vw;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .p-left {
+        padding-left: 0px;
+    }
+
+    .announcement-heading {
+        width: 100vw;
+        top: 11vw;
+    }
+
+    .underlined-heading {
+        font-size: 5.6vw;
+    }
+
+    .announcement-heading span {
+        font-size: 3.73vw;
+    }
+
+    .underlined-heading::after {
+        width: 43.5vw;
+        height: 4px;
+    }
 }

@@ -42,8 +42,8 @@ const Features = () => {
                     id: "line_anim",
                     trigger: el.current,
                     scrub: true,
-                    start: "40% 90%",
-                    end: "bottom 60%",
+                    start: "2% 90%",
+                    end: "7% 60%",
                     markers: true,
                     onLeave: () => {ScrollTrigger.refresh();}
                 }
@@ -56,9 +56,13 @@ const Features = () => {
                     height: '10.41vw',
                     ease: 'power1.in'
                 })
-                .to(".box4", {
+                .to(".box2", {
                     opacity: 1,
                     ease: 'power1.in',
+                })
+                .to('.box3', {
+                    opacity: 1,
+                    ease: 'power2.in',
                 })
         }, el);
         return () => ctx.revert();
@@ -70,8 +74,8 @@ const Features = () => {
         <div className={`gradient-background ${isBannerVisible ? 'fade-in' : ''}`}>
             <div className='features-section'>
                 <div className='fade_rule'></div>
-                <div className='features-body'>
-                    <div className='about' ref={el}>
+                <div className='features-body' ref={el}>
+                    <div className='about' >
                         <div className="heading-container text box1">
                             With <h1 className="brand-heading text">MARKETRACK</h1>
                         </div>
@@ -80,7 +84,7 @@ const Features = () => {
                             {isTypingTriggered && <BiSolidPointer className='pointer' />}
                         </div>
                         <div className='vertical-line'></div>
-                        <div className='exclusive flex-col box4'>
+                        <div className='exclusive flex-col box2'>
                             <div className='flex-row'>
                                 <p className='feel-text'>Get a Feel. Try it Out Now</p>
                                 <ArrowSvg />
@@ -91,7 +95,9 @@ const Features = () => {
                             </div>
                         </div>
                     </div>
-                    <FeaturesSection />
+                    <div className="box3">
+                        <FeaturesSection />
+                    </div>
                 </div>
             </div>
         </div>
