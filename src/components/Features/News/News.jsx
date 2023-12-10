@@ -6,14 +6,12 @@ import { FaNewspaper } from 'react-icons/fa';
 import Lottie from "lottie-react";
 
 const News = () => {
-    const { isChecked } = useStateContext();
+    const { isChecked, isLottiePlay } = useStateContext();
     const newsRef = useRef(null);
     useEffect(() => {
-        if (!isChecked) {
-            setTimeout(() => {
-                newsRef.current.setSpeed(0.8);
-                newsRef.current.playSegments([1, 200], true);
-            }, 100);
+        if (!isChecked && isLottiePlay) {
+            newsRef.current.setSpeed(0.8);
+            newsRef.current.playSegments([1, 200], true);
         }
         else if (isChecked) {
             newsRef.current.setSpeed(1);

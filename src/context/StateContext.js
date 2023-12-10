@@ -7,10 +7,11 @@ export const StateContext = ({ children }) => {
     const [isChecked, setChecked] = useState(false);
     const [isBannerVisible, setBannerVisible] = useState(false);
     const [isCardChecked, setCardChecked] = useState(false);
+    const [isLottiePlay, setLottiePlay] = useState(false);
 
     return (
         <Context.Provider value={{
-            isVisible, isChecked, isBannerVisible, isCardChecked, setCardChecked, setIsVisible, setChecked, setBannerVisible
+            isVisible, isChecked, isBannerVisible, isCardChecked, isLottiePlay, setLottiePlay, setCardChecked, setIsVisible, setChecked, setBannerVisible
         }}>
             {children}
         </Context.Provider>

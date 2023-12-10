@@ -11,7 +11,7 @@ import { ScrollTrigger } from 'gsap/all';
 gsap.registerPlugin(ScrollTrigger);
 
 const Features = () => {
-    const { isBannerVisible } = useStateContext();
+    const { isBannerVisible, setLottiePlay } = useStateContext();
     const el = useRef();
     const tl = useRef();
     const [isTypingTriggered, setTypingTriggered] = useState(false);
@@ -45,7 +45,13 @@ const Features = () => {
                     start: "2% 90%",
                     end: "7% 60%",
                     markers: true,
-                    onLeave: () => {ScrollTrigger.refresh();}
+                    onLeave: () => {
+                        setLottiePlay(true);
+                        ScrollTrigger.refresh();
+                    },
+                    onEnterBack: ()=>{
+                        setLottiePlay(false);
+                    }
                 }
             })
                 .to(".box1", {
@@ -66,7 +72,7 @@ const Features = () => {
                 })
         }, el);
         return () => ctx.revert();
-    }, []);
+    }, [setLottiePlay]);
 
 
 

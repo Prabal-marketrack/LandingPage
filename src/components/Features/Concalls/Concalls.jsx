@@ -10,21 +10,20 @@ import ConcallAnimation from './../../../lotties/ConcallAnimation.json';
 
 
 const Concalls = () => {
-    const { isChecked, isCardChecked, setCardChecked } = useStateContext();
+    const { isChecked, isCardChecked, setCardChecked, isLottiePlay } = useStateContext();
     const totalSlides = 3;
     const [currentIndex, setCurrentIndex] = useState(3);
     const concallRef = useRef(null);
 
     useEffect(() => {
+        if (!isChecked && isLottiePlay) {
+            concallRef.current.setSpeed(0.8);
+            concallRef.current.goToAndPlay(1, true);
+        }
         if (isChecked === false) {
             setCurrentIndex(3);
         }
-        if (!isChecked) {
-            setTimeout(() => {
-                concallRef.current.goToAndPlay(1, true);
-            }, 500);
-        }
-    }, [isChecked, setCurrentIndex]);
+    }, [isChecked, isLottiePlay, setCurrentIndex]);
 
     const handleClick = (index) => {
         setCurrentIndex(index);
@@ -53,7 +52,7 @@ const Concalls = () => {
                             <Lottie
                                 lottieRef={concallRef}
                                 animationData={ConcallAnimation}
-                                autoplay={false}
+                                autoplay={true}
                                 loop={false}
                             />
                         </div>

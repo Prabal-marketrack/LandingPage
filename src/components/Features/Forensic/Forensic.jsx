@@ -6,9 +6,9 @@ import { useStateContext } from '../../../context/StateContext';
 
 const Forensic = () => {
     const forensicRef = useRef(null);
-    const {isChecked} = useStateContext();
+    const {isChecked, isLottiePlay} = useStateContext();
     useEffect(()=>{
-        if(!isChecked){
+        if(!isChecked && isLottiePlay){
             forensicRef.current.play();
         }
         else{
