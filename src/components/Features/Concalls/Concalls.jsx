@@ -36,67 +36,75 @@ const Concalls = () => {
     }
 
     return (
-        <div className='concall hide-everything'>
-            <div className='concall-heading'>
-                <h1 className='concall-heading-text'>Conference Calls <BsFillTelephoneFill style={{ height: '20px' }} /></h1>
-            </div>
-            <div className='concall-body'>
-                {!isChecked &&
-                    <div className='concall-body-off'>
-                        <div className='infosys-header-off'>
-                            <img src={infosysOff} alt="" height={'60px'} />
-                            <div className="verticalRule"></div>
-                            <span className='infosys-text'>Earnings Call Q1 2023</span>
+        <>
+            <div className='concall hide-lottie'>
+                <div className='concall-heading'>
+                    <h1 className='concall-heading-text'>Conference Calls <BsFillTelephoneFill style={{ height: '20px' }} /></h1>
+                </div>
+                <div className='concall-body'>
+                    {!isChecked &&
+                        <div className='concall-body-off'>
+                            <div className='infosys-header-off'>
+                                <img src={infosysOff} alt="" height={'60px'} />
+                                <div className="verticalRule"></div>
+                                <span className='infosys-text'>Earnings Call Q1 2023</span>
+                            </div>
+                            <div className='concall-lottie'>
+                                <Lottie
+                                    lottieRef={concallRef}
+                                    animationData={ConcallAnimation}
+                                    autoplay={true}
+                                    loop={false}
+                                />
+                            </div>
+                            <div style={{ position: 'relative', paddingTop: '4.86vw' }}>
+                                <span style={{ fontSize: '2.43vw' }}>25 Pages</span>
+                            </div>
                         </div>
-                        <div className='concall-lottie'>
-                            <Lottie
-                                lottieRef={concallRef}
-                                animationData={ConcallAnimation}
-                                autoplay={true}
-                                loop={false}
-                            />
-                        </div>
-                        <div style={{ position: 'relative', paddingTop: '4.86vw' }}>
-                            <span style={{ fontSize: '2.43vw' }}>25 Pages</span>
-                        </div>
-                    </div>
-                }
-                {isChecked && <div className='concall-body-on flex-col'>
-                    <div className='concall-carousel' style={{ height: (currentIndex === 0) ? '36.81vw' : ((currentIndex===1)&&!isCardChecked) ? '32.85vw': ((currentIndex===1)&&isCardChecked) ?'42.22vw' : '41.18vw' }}>
-                        <div className="headermask"></div>
-                        <div className='infosys-header'>
-                            <img src={infosys} alt="" height={'60px'} style={{ marginLeft: '108px' }} />
-                            <div className="verticalRule"></div>
-                            <span className='infosys-text'>Earnings Call Q1 2023</span>
-                        </div>
-                        <div className="carousel-buttons">
-                            <button className='carousel-button' id='button0' onClick={() => handleClick(0)}>On Attrition</button>
-                            <button className='carousel-button' id='button1' onClick={() => handleClick(1)}>On Guidance Cut</button>
-                            <button className='carousel-button button-active' id='button2' onClick={() => handleClick(2)}>On Generative AI</button>
-                        </div>
+                    }
+                    {isChecked && <div className='concall-body-on flex-col'>
+                        <div className='concall-carousel' style={{ height: (currentIndex === 0) ? '36.81vw' : ((currentIndex === 1) && !isCardChecked) ? '32.85vw' : ((currentIndex === 1) && isCardChecked) ? '42.22vw' : '41.18vw' }}>
+                            <div className="headermask"></div>
+                            <div className='infosys-header'>
+                                <img src={infosys} alt="" height={'60px'} style={{ marginLeft: '108px' }} />
+                                <div className="verticalRule"></div>
+                                <span className='infosys-text'>Earnings Call Q1 2023</span>
+                            </div>
+                            <div className="carousel-buttons">
+                                <button className='carousel-button' id='button0' onClick={() => handleClick(0)}>On Attrition</button>
+                                <button className='carousel-button' id='button1' onClick={() => handleClick(1)}>On Guidance Cut</button>
+                                <button className='carousel-button button-active' id='button2' onClick={() => handleClick(2)}>On Generative AI</button>
+                            </div>
 
-                        <div className="card-container">
-                            <Card index={currentIndex} />
-                        </div>
+                            <div className="card-container">
+                                <Card index={currentIndex} />
+                            </div>
 
-                        <div className="carousel-dots">
-                            {Array(totalSlides).fill(0).map((_, index) => (
-                                <div
-                                    key={index}
-                                    className='dot'
-                                    style={{backgroundColor: index===currentIndex?'#0090FF':'#555555'}}
-                                    onClick={() => { handleClick(index); }}
-                                ></div>
-                            ))}
+                            <div className="carousel-dots">
+                                {Array(totalSlides).fill(0).map((_, index) => (
+                                    <div
+                                        key={index}
+                                        className='dot'
+                                        style={{ backgroundColor: index === currentIndex ? '#0090FF' : '#555555' }}
+                                        onClick={() => { handleClick(index); }}
+                                    ></div>
+                                ))}
+                            </div>
                         </div>
-                    </div>
-                    <div className='flex-col concall-footer'>
-                        <span className='blurred-text' style={{ fontSize: '30px' }}>Eliminates Noise</span>
-                        <span style={{ fontSize: '26.25px' }}>So You Can Focus on What Matters</span>
-                    </div>
-                </div>}
+                        <div className='flex-col concall-footer'>
+                            <span className='blurred-text' style={{ fontSize: '30px' }}>Eliminates Noise</span>
+                            <span style={{ fontSize: '26.25px' }}>So You Can Focus on What Matters</span>
+                        </div>
+                    </div>}
+                </div>
             </div>
-        </div>
+            <div className="skeleton-text hide-everything">
+                <div className="flex-col alignItems-center">
+                    <span>Concalls</span>
+                    <BsFillTelephoneFill/>
+                </div>
+            </div>
+        </>
     )
 }
 

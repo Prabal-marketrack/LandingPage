@@ -1,0 +1,162 @@
+.corporate-ui-element {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 36.46vw;
+    background-color: #222222;
+    border-radius: 15px;
+    height: 31vw;
+    border-color: #707070;
+    border-width: 1px;
+    padding: 1.3vw;
+    gap: 1.4vw;
+}
+
+.deepak-nitrite {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.05vw;
+    font-family: "InterTight-Regular";
+    color: #DDDDDD;
+    gap: 8px;
+}
+
+.filing-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    z-index: 1;
+}
+
+.filing-date {
+    width: 4.4vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "InterTight-Regular";
+    font-size: 0.9vw;
+    color: #AAAAAA;
+}
+
+.filing-content {
+    display: flex;
+    flex-direction: column;
+    width: 27vw;
+}
+
+.filing-content-heading {
+    font-family: "Inter-Medium";
+    font-size: 1.04vw;
+    color: #CCCCCC;
+}
+
+.filing-content-description {
+    display: flex;
+    flex-direction: column;
+    font-family: "Inter-Regular";
+    font-size: 0.86vw;
+    color: #AAAAAA;
+    padding-left: 0.6vw;
+    padding-top: 0.75vw;
+    padding-bottom: 0.75vw;
+    gap: 0.75vw;
+    line-height: 1.2vw;
+}
+
+.filing-files {
+    display: flex;
+    flex-direction: row;
+    padding-left: 0.6vw;
+    padding-top: 4px;
+    position: relative;
+}
+
+.file-pdf {
+    cursor: pointer;
+    width: 2.4vw;
+    height: 1.56vw;
+    border: 1px solid #707070;
+    border-radius: 1.04vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: all 0.2s ease-in;
+    gap: 5px;
+}
+
+.file-pdf:hover {
+    width: 9.5vw;
+}
+
+.file-pdf img {
+    width: 0.86vw;
+    padding-left: 0.78vw;
+}
+.file-pdf-3{
+    position: absolute;
+    left: 40%;
+}
+.file-text {
+    font-family: "Inter-Regular";
+    font-size: 0.73vw;
+    opacity: 0;
+    color: #AAAAAA;
+    animation: pdfTextAppear 0.2s forwards 0.2s;
+}
+
+@keyframes pdfTextAppear {
+    100% {
+        opacity: 1;
+    }
+}
+
+.vertical-bar {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 8px;
+    left: 40px;
+}
+.impact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 11.3vw;
+    height: 3.6vw;
+    background-color: #262626;
+    border-radius: 22.5px;
+    box-shadow: 7px 3px 20px #000000;
+    margin-bottom: 40px;
+}
+.impact-text{
+    font-family: 'Poppins-Regular';
+    font-size: 0.94vw;
+    color: #FFFFFF;
+}
+.arrow{
+    position: absolute;
+    top: 3.2vw;
+    left: 42%;
+}
+.circle {
+    width: 1.3vw;
+    height: 1.3vw;
+    border-radius: 15px;
+    background-color: #A9FF9F;
+}
+
+.line-1 {
+    width: 1px;
+    height: 11.5vw;
+    background-color: #707070;
+}
+
+.line-2 {
+    width: 1px;
+    height: 12vw;
+    background-color: #707070;
+}

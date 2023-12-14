@@ -16,8 +16,8 @@ const Forensic = () => {
         }
     })
     return (
-        <div>
-            <div className="forensic hide-everything">
+        <>
+            <div className="forensic hide-lottie">
                 <div className="forensic-heading">
                     <span>Forensic Scrutiny</span>
                 </div>
@@ -27,7 +27,13 @@ const Forensic = () => {
                     </video>
                 </div>
             </div>
-        </div>
+            <div className="skeleton-text hide-everything">
+                <div className="flex-col alignItems-center">
+                    <span>Forensic</span>
+                    <span>Scrutiny</span>
+                </div>
+            </div>
+        </>
     )
 }
 

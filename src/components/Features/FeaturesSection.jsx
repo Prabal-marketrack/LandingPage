@@ -13,10 +13,8 @@ import React, { useLayoutEffect } from 'react';
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const FeaturesSection = () => {
-
     const { isChecked } = useStateContext();
     // let main = document.querySelector(".about");
-
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
 
@@ -31,6 +29,9 @@ const FeaturesSection = () => {
                 }, "<")
                 .to('.corporate-lottie', {
                     scale: 0,
+                }, "<")
+                .to('.corporate-ui-element', {
+                    opacity: 0,
                 }, "<")
                 .to('.concall-body', {
                     scale: 0,
@@ -55,12 +56,17 @@ const FeaturesSection = () => {
                     height: "38.19vw",
                     width: "43.4vw",
                     borderRadius: '50px',
+                    top: 0
                 }, "<")
                 .to('.grid-item', {
                     opacity: 1,
                 }, "<")
+                .to('.hide-lottie',{
+                    opacity: 0
+                }, "<")
                 .to('.hide-everything', {
                     fontSize: '90px',
+                    opacity: 1,
                 }, "<")
                 .to('.grid-container', {
                     scale: 0.26,
@@ -89,7 +95,7 @@ const FeaturesSection = () => {
 
             ScrollTrigger.create({
                 trigger: ".forensic-section",
-                start: 'bottom bottom-=50',
+                start: 'bottom+=100 bottom-=50',
                 end: "bottom bottom",
                 endTrigger: ".footer",
                 scrub: true,
@@ -473,7 +479,7 @@ const FeaturesSection = () => {
                     <div className="grid-item"></div>
                     <div className="grid-item"></div>
                     <div className="corporate-section" style={{ top: '-7.29vw' }}><CorporateFillings /></div>
-                    <div className="forensic-section"><Forensic /></div>
+                    <div className="forensic-section" style={{top: isChecked? '13vw':'0vw'}}><Forensic /></div>
                     <div className="grid-item triggerClass"><span className='hide-everything'>Employees</span></div>
                     <div className="grid-item"><span className='hide-everything'>Sentiment</span></div>
                     <div className="grid-item">

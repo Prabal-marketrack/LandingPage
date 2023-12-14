@@ -19,22 +19,30 @@ const News = () => {
         }
     });
     return (
-        <div className='news hide-everything'>
-            <div className='news-heading'>
-                <h1 className='news-heading-text'>
+        <>
+            <div className='news hide-lottie'>
+                <div className='news-heading'>
+                    <h1 className='news-heading-text'>
+                        <span>News</span>
+                        <FaNewspaper style={{ paddingLeft: '12px' }} />
+                    </h1>
+                </div>
+                <div className="news-lottie">
+                    <Lottie
+                        lottieRef={newsRef}
+                        animationData={NewsAnimation}
+                        autoplay={false}
+                        loop={false}
+                    />
+                </div>
+            </div>
+            <div className="skeleton-text hide-everything">
+                <div className="flex-col alignItems-center">
                     <span>News</span>
-                    <FaNewspaper style={{ paddingLeft: '12px' }} />
-                </h1>
+                    <FaNewspaper/>
+                </div>
             </div>
-            <div className="news-lottie">
-                <Lottie
-                    lottieRef={newsRef}
-                    animationData={NewsAnimation}
-                    autoplay={false}
-                    loop={false}
-                />
-            </div>
-        </div>
+        </>
     )
 }
 
