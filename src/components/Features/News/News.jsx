@@ -6,14 +6,12 @@ import { FaNewspaper } from 'react-icons/fa';
 import Lottie from "lottie-react";
 
 const News = () => {
-    const { isChecked } = useStateContext();
+    const { isChecked, isLottiePlay } = useStateContext();
     const newsRef = useRef(null);
     useEffect(() => {
-        if (!isChecked) {
-            setTimeout(() => {
-                newsRef.current.setSpeed(0.8);
-                newsRef.current.playSegments([1, 200], true);
-            }, 100);
+        if (!isChecked && isLottiePlay) {
+            newsRef.current.setSpeed(0.8);
+            newsRef.current.playSegments([1, 200], true);
         }
         else if (isChecked) {
             newsRef.current.setSpeed(1);
@@ -21,22 +19,30 @@ const News = () => {
         }
     });
     return (
-        <div className='news hide-everything'>
-            <div className='news-heading'>
-                <h1 className='news-heading-text'>
+        <>
+            <div className='news hide-lottie'>
+                <div className='news-heading'>
+                    <h1 className='news-heading-text'>
+                        <span>News</span>
+                        <FaNewspaper style={{ paddingLeft: '12px' }} />
+                    </h1>
+                </div>
+                <div className="news-lottie">
+                    <Lottie
+                        lottieRef={newsRef}
+                        animationData={NewsAnimation}
+                        autoplay={false}
+                        loop={false}
+                    />
+                </div>
+            </div>
+            <div className="skeleton-text hide-everything">
+                <div className="flex-col alignItems-center">
                     <span>News</span>
-                    <FaNewspaper style={{ paddingLeft: '12px' }} />
-                </h1>
+                    <FaNewspaper/>
+                </div>
             </div>
-            <div className="news-lottie">
-                <Lottie
-                    lottieRef={newsRef}
-                    animationData={NewsAnimation}
-                    autoplay={false}
-                    loop={false}
-                />
-            </div>
-        </div>
+        </>
     )
 }
 

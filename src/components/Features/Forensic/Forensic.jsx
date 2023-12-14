@@ -6,9 +6,9 @@ import { useStateContext } from '../../../context/StateContext';
 
 const Forensic = () => {
     const forensicRef = useRef(null);
-    const {isChecked} = useStateContext();
+    const {isChecked, isLottiePlay} = useStateContext();
     useEffect(()=>{
-        if(!isChecked){
+        if(!isChecked && isLottiePlay){
             forensicRef.current.play();
         }
         else{
@@ -16,8 +16,8 @@ const Forensic = () => {
         }
     })
     return (
-        <div>
-            <div className="forensic hide-everything">
+        <>
+            <div className="forensic hide-lottie">
                 <div className="forensic-heading">
                     <span>Forensic Scrutiny</span>
                 </div>
@@ -27,7 +27,13 @@ const Forensic = () => {
                     </video>
                 </div>
             </div>
-        </div>
+            <div className="skeleton-text hide-everything">
+                <div className="flex-col alignItems-center">
+                    <span>Forensic</span>
+                    <span>Scrutiny</span>
+                </div>
+            </div>
+        </>
     )
 }
 

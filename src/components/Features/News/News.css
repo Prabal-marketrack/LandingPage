@@ -1,4 +1,4 @@
-.news{
+.news {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -6,7 +6,7 @@
     gap: 5px;
 }
 
-.news-heading{
+.news-heading {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,7 +14,7 @@
     margin-top: 24px;
 }
 
-.news-heading-text{
+.news-heading-text {
     font-family: 'Poppins-Regular';
     font-size: 30px;
     font-weight: 400;
@@ -23,7 +23,7 @@
     align-items: center;
 }
 
-.news-lottie{
+.news-lottie {
     position: absolute;
     width: 55.55vw;
     /* animation: lottieScaleIn 2s forwards 8s; */

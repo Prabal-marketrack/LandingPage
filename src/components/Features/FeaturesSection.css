@@ -36,36 +36,35 @@
     border-radius: 50px;
     background-color: #151515;
     opacity: 0;
-    /* border: 1px solid white; */
-    /* animation: gridHide 14s forwards; */
 }
 
 .news-section {
+    position: relative;
     width: 43.4vw;
     height: 34.7vw;
     background-color: #151515;
     border-radius: 10px;
-    /* animation: sizeAnimation 2s forwards 9s; */
 }
 
 .concall-section {
+    position: relative;
     width: 43.4vw;
     height: 42.3vw;
     background-color: #151515;
     border-radius: 10px;
     transition: all 0.2s;
-    /* animation: sizeAnimation 2s forwards 9s; */
 }
 
 .corporate-section {
     position: relative;
     width: 43.4vw;
-    height: 38.2vw;
+    height: 45vw;
     background-color: #151515;
     border-radius: 10px;
 }
 
 .forensic-section {
+    position: relative;
     width: 43.4vw;
     height: 31.95vw;
     background-color: #151515;
@@ -94,7 +93,6 @@
     border-radius: 4px;
     transform: scale(3.5);
 }
-
 
 .complexity-text {
     position: absolute;

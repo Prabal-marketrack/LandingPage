@@ -22,7 +22,7 @@ const HeroForm = ({fontSize, textColor, animationTime}) => {
     const [email, setEmail] = useState("");
     const emptyErrorMessages = ['Email Field is Feeling Rather Empty :(', 'The Email Field Misses Your Input Already!'];
     const invalidErrorMessages = [
-        'Invalid email? No worries, second chances here!',
+        'Invalid email..No worries, second chances here!',
         'Oops! Email Typing Error? We\'ve all been there!',
         'Invalid Email! Just a tiny typing error? Retry Please!',
         'Invalid email, Let\'s double-check that?',
