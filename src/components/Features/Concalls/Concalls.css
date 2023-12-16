@@ -5,19 +5,18 @@
 .concall-heading {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 1.39vw;
+    margin-bottom: 1.39vw;
 }
 
 .concall-heading-text {
     font-family: 'Poppins-Regular';
-    font-size: 30px;
+    font-size: 2.09vw;
     font-weight: 400;
 }
 
 .concall-body {
     transition: all 0.3s;
-    /* animation: lottieScaleIn 2s forwards 9s; */
 }
 
 /* CSS for toggle button off state - Starts*/
@@ -28,12 +27,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
+    gap: 0.35vw;
     animation: appear 1s;
 }
 
 .infosys-header-off {
-    padding: 5px;
+    padding: 0.35vw;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -52,7 +51,7 @@
 /* CSS for toggle button - ON state */
 
 .concall-body-on {
-    margin-bottom: 15px;
+    margin-bottom: 1.04vw;
     align-items: center;
     animation: appear 2s;
 }
@@ -84,20 +83,20 @@
 
 .verticalRule {
     width: 1px;
-    height: 52px;
+    height: 3.6vw;
     background-color: #707070;
-    margin-left: 12px;
+    margin-left: 0.83vw;
 }
 
 .infosys-text {
     font-family: 'Poppins-Regular';
-    font-size: 19px;
-    margin-left: 20px;
+    font-size: 1.32vw;
+    margin-left: 1.39vw;
     color: #DDDDDD;
 }
 
 .carousel-buttons {
-    padding: 16px;
+    padding: 1.11vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -105,12 +104,12 @@
 }
 
 .carousel-button {
-    padding: 5px 20px;
+    padding: 0.35vw 1.39vw;
     color: #AAAAAA;
     background-color: transparent;
     border: none;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 1.04vw;
     font-family: 'InterTight-Regular';
     transition: all 0.4s;
 }
@@ -126,21 +125,21 @@
 
 .card-container {
     display: flex;
-    margin-left: 44px;
+    margin-left: 3.05vw;
 }
 
 .carousel-dots {
     position: relative;
-    bottom: 18.5px;
-    margin-top: 36px;
+    bottom: 1.3vw;
+    margin-top: 2.5vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
 .carousel-dots .dot {
-    width: 7.5px;
-    height: 7.5px;
+    width: 0.52vw;
+    height: 0.52vw;
     margin: 0 2px;
     border-radius: 50%;
     cursor: pointer;
@@ -150,8 +149,8 @@
 .concall-footer {
     position: relative;
     align-items: center;
-    margin-top: 20px;
-    gap: 5px;
+    margin-top: 1.39vw;
+    gap: 0.35vw;
 }
 
 .blurred-text {

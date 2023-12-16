@@ -106,7 +106,7 @@ const FeaturesSection = () => {
                     snapTo: "labelsDirectional",
                     duration: 2,
                 },
-                markers: true,
+                markers: false,
             })
         });
 
@@ -478,7 +478,7 @@ const FeaturesSection = () => {
                     <div className="grid-item"></div>
                     <div className="grid-item"></div>
                     <div className="grid-item"></div>
-                    <div className="corporate-section" style={{ top: '-7.29vw' }}><CorporateFillings /></div>
+                    <div className="corporate-section" style={{ top: '-7.5vw' }}><CorporateFillings /></div>
                     <div className="forensic-section" style={{top: isChecked? '13vw':'0vw'}}><Forensic /></div>
                     <div className="grid-item triggerClass"><span className='hide-everything'>Employees</span></div>
                     <div className="grid-item"><span className='hide-everything'>Sentiment</span></div>
