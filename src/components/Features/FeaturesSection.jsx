@@ -67,7 +67,7 @@ const FeaturesSection = () => {
                 .to('.hide-everything', {
                     fontSize: '90px',
                     opacity: 1,
-                }, "<")
+                }, ">")
                 .to('.grid-container', {
                     scale: 0.26,
                     gap: '40px',
