@@ -2,7 +2,7 @@ import React, { useLayoutEffect, useRef, useState, useEffect } from 'react';
 import { BiSolidPointer } from 'react-icons/bi';
 import './Features.css';
 import { useStateContext } from '../../context/StateContext';
-import FeaturesSection from './FeaturesSection';
+import { FeaturesSection } from './FeaturesSection';
 import ArrowSvg from './ArrowSvg';
 import ToggleButton from './ToggleButton';
 import { gsap } from "gsap";
@@ -18,7 +18,7 @@ const Features = () => {
     const handleScroll = () => {
         const element = document.getElementById('typing-trigger');
         const elementPosition = element.getBoundingClientRect();
-        const windowHeight = window.innerHeight-150;
+        const windowHeight = window.innerHeight - 150;
         const triggerPoint = windowHeight;
 
         if (elementPosition.bottom <= triggerPoint) {
@@ -44,14 +44,15 @@ const Features = () => {
                     scrub: true,
                     start: "2% 90%",
                     end: "7% 60%",
-                    markers: true,
+                    markers: false,
+                    invalidateOnRefresh: true,
                     onLeave: () => {
                         setLottiePlay(true);
-                        ScrollTrigger.refresh();
                     },
-                    onEnterBack: ()=>{
+                    onEnterBack: () => {
                         setLottiePlay(false);
-                    }
+                    },
+
                 }
             })
                 .to(".box1", {
@@ -59,7 +60,7 @@ const Features = () => {
                     ease: 'power2.in',
                 })
                 .to(".vertical-line", {
-                    height: '10.41vw',
+                    height: '18.5vh',
                     ease: 'power1.in'
                 })
                 .to(".box2", {
@@ -85,7 +86,7 @@ const Features = () => {
                         <div className="heading-container text box1">
                             With <h1 className="brand-heading text">MARKETRACK</h1>
                         </div>
-                        <div className='text about-text' id='typing-trigger' style={{opacity: isTypingTriggered?'1':'0'}}>
+                        <div className='text about-text' id='typing-trigger' style={{ opacity: isTypingTriggered ? '1' : '0' }}>
                             {isTypingTriggered && <span className='pr-20 typewriter'>Leave Complexity Behind with Just One Click</span>}
                             {isTypingTriggered && <BiSolidPointer className='pointer' />}
                         </div>
@@ -95,7 +96,7 @@ const Features = () => {
                                 <p className='feel-text'>Get a Feel. Try it Out Now</p>
                                 <ArrowSvg />
                             </div>
-                            <div className='flex-row' style={{ alignItems: "center", paddingRight: '20px', paddingBottom: '5px', zIndex: '1' }}>
+                            <div className='flex-row' style={{ alignItems: "center", paddingRight: '1.4vw', paddingBottom: '7px', zIndex: '1' }}>
                                 <span className="exclusive-brand-heading">MARKETRACK</span>
                                 <ToggleButton />
                             </div>

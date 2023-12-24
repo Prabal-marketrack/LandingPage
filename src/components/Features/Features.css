@@ -1,8 +1,8 @@
 .gradient-background {
     position: relative;
-    top: -10px;
-    height: 390px;
-    background: linear-gradient(to bottom, #03213B, #000101);
+    /* top: -10px; */
+    /* height: 390px; */
+    /* background: linear-gradient(to bottom, #03213B, #000101); */
     transition: opacity 1s;
     opacity: 0;
 }
@@ -24,7 +24,7 @@
 }
 
 .features-section {
-    padding-top: 80px;
+    padding-top: 11vh;
 }
 
 .about {
@@ -33,7 +33,7 @@
     text-align: center;
     align-items: center;
     color: #fff;
-    padding-bottom: 20px;
+    padding-bottom: 2.74vh;
     z-index: 1;
 }
 
@@ -49,13 +49,12 @@
 }
 
 .about .text {
-    font-size: 40px;
+    font-size: 3.125vw;
     margin: auto;
-    padding-top: 10px;
+    padding-top: 1.4vh;
 }
 
 .about .about-text {
-    height: 75px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -66,7 +65,7 @@
 /* Heading Container CSS */
 
 .heading-container .text {
-    margin-top: 24px;
+    margin-top: 8.7vh;
     position: relative;
 }
 
@@ -74,15 +73,15 @@
     position: relative;
     display: inline-block;
     font-family: 'Cantarell-Bold', sans-serif;
-    font-size: 40px;
+    font-size: 2.76vw;
 }
 
 .brand-heading::after {
     content: '';
     position: absolute;
-    bottom: 2px;
+    bottom: 0px;
     left: 0;
-    width: 21.67vw;
+    width: 24vw;
     height: 3px;
     background-image: linear-gradient(to right, #FF2E2E 0%, #FF2E2E 49%, transparent 49%, transparent 51%, #66FF00 51%, #66FF00 100%);
     background-size: 100% 100%;
@@ -141,21 +140,20 @@
 /* Get a feel try it now styles */
 .exclusive {
     align-items: center;
-    padding-top: 22px;
+    padding-top: 3.1vh;
 }
 
 .feel-text {
     font-family: 'Poppins-Regular';
-    font-size: 30px;
+    font-size: 2.08vw;
 }
 
 .exclusive-brand-heading {
     position: relative;
     display: flex;
     font-family: 'Cantarell-Bold', sans-serif;
-    font-size: 34.5px;
-    padding-right: 22px;
-    width: 18.75vw;
+    font-size: 2.4vw;
+    padding-right: 1.56vw;
 }
 
 .exclusive-brand-heading:after {
@@ -174,7 +172,7 @@
 .toggle-button {
     background-color: #252525;
     width: 7.08vw;
-    height: 2.91vw;
+    height: 2.96vw;
     border-radius: 3.472vw;
     display: flex;
     text-transform: uppercase;
@@ -189,13 +187,13 @@
 }
 
 .slider {
-    width: 32.5px;
-    height: 32.5px;
+    width: 2.2vw;
+    height: 2.2vw;
     background-color: white;
     border-radius: 100%;
     position: absolute;
-    left: 8px;
-    top: 6px;
+    left: 0.4vw;
+    top: 0.4vw;
 }
 
 input:checked~.toggle-button-css {
@@ -203,7 +201,7 @@ input:checked~.toggle-button-css {
 }
 
 input:checked~.toggle-button-css .slider {
-    transform: translatex(60px);
+    transform: translatex(4vw);
 }
 
 .toggle-label,
@@ -212,7 +210,7 @@ input:checked~.toggle-button-css .slider {
 }
 
 .wrapper {
-    padding-top: 12px;
+    padding-top: 1.65vh;
 }
 
 .wrapper input {
