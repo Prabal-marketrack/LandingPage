@@ -2,7 +2,7 @@ import React, { useLayoutEffect, useRef, useState, useEffect } from 'react';
 import { BiSolidPointer } from 'react-icons/bi';
 import './Features.css';
 import { useStateContext } from '../../context/StateContext';
-import FeaturesSection from './FeaturesSection';
+import {FeaturesSection} from './FeaturesSection';
 import ArrowSvg from './ArrowSvg';
 import ToggleButton from './ToggleButton';
 import { gsap } from "gsap";

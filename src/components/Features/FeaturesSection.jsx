@@ -7,20 +7,24 @@ import Forensic from './Forensic/Forensic';
 import { useStateContext } from '../../context/StateContext';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import React, { useLayoutEffect } from 'react';
 
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+gsap.registerPlugin(ScrollTrigger);
+const tl1 = gsap.timeline();
+
+const invalidateTL = ()=>{
+    console.log("Invalidate called");
+    tl1.invalidate();
+}
 
 const FeaturesSection = () => {
     const { isChecked } = useStateContext();
     const windowHeight = window.innerHeight;
-    const scaleValue = 0.11*windowHeight/730;
+    const scaleValue = 0.11 * windowHeight / 730;
     // let main = document.querySelector(".about");
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
             console.log(scaleValue);
-            const tl1 = gsap.timeline();
             tl1
                 .addLabel("start")
                 .to('.news-lottie', {
@@ -63,7 +67,7 @@ const FeaturesSection = () => {
                 .to('.grid-item', {
                     opacity: 1,
                 }, "<")
-                .to('.hide-lottie',{
+                .to('.hide-lottie', {
                     opacity: 0
                 }, "<")
                 .to('.hide-everything', {
@@ -109,6 +113,7 @@ const FeaturesSection = () => {
                     duration: 2,
                 },
                 markers: true,
+                
             })
         });
 
@@ -481,7 +486,7 @@ const FeaturesSection = () => {
                     <div className="grid-item"></div>
                     <div className="grid-item"></div>
                     <div className="corporate-section" style={{ top: '-7.5vw' }}><CorporateFillings /></div>
-                    <div className="forensic-section" style={{top: isChecked? '13vw':'0vw'}}><Forensic /></div>
+                    <div className="forensic-section" style={{ top: isChecked ? '13vw' : '0vw' }}><Forensic /></div>
                     <div className="grid-item triggerClass"><span className='hide-everything'>Employees</span></div>
                     <div className="grid-item"><span className='hide-everything'>Sentiment</span></div>
                     <div className="grid-item">
@@ -544,4 +549,4 @@ const FeaturesSection = () => {
     );
 };
 
-export default FeaturesSection;
+export {FeaturesSection, invalidateTL};
