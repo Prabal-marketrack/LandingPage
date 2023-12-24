@@ -14,10 +14,12 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const FeaturesSection = () => {
     const { isChecked } = useStateContext();
+    const windowHeight = window.innerHeight;
+    const scaleValue = 0.11*windowHeight/730;
     // let main = document.querySelector(".about");
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
-
+            console.log(scaleValue);
             const tl1 = gsap.timeline();
             tl1
                 .addLabel("start")
@@ -77,7 +79,7 @@ const FeaturesSection = () => {
                 })
                 .addLabel("scaled")
                 .to('.grid-container', {
-                    scale: 0.11,
+                    scale: scaleValue,
                     gap: '60px',
                 }, ">")
                 .to('.hide-everything', {
@@ -106,7 +108,7 @@ const FeaturesSection = () => {
                     snapTo: "labelsDirectional",
                     duration: 2,
                 },
-                markers: false,
+                markers: true,
             })
         });
 
