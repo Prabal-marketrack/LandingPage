@@ -112,7 +112,7 @@ const FeaturesSection = () => {
                     snapTo: "labelsDirectional",
                     duration: 2,
                 },
-                markers: false,
+                markers: true,
                 invalidateOnRefresh: true,
             })
         });
