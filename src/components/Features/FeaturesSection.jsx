@@ -12,7 +12,7 @@ import React, { useLayoutEffect } from 'react';
 gsap.registerPlugin(ScrollTrigger);
 const tl1 = gsap.timeline();
 
-const invalidateTL = ()=>{
+const invalidateTL = () => {
     console.log("Invalidate called");
     tl1.invalidate();
 }
@@ -112,14 +112,13 @@ const FeaturesSection = () => {
                     snapTo: "labelsDirectional",
                     duration: 2,
                 },
-                markers: true,
-                
+                markers: false,
+                invalidateOnRefresh: true,
             })
         });
 
         return () => ctx.revert();
-
-    }, [])
+    }, [scaleValue]);
 
     return (
         <>
@@ -485,8 +484,8 @@ const FeaturesSection = () => {
                     <div className="grid-item"></div>
                     <div className="grid-item"></div>
                     <div className="grid-item"></div>
-                    <div className="corporate-section" style={{ top: '-7.5vw' }}><CorporateFillings /></div>
-                    <div className="forensic-section" style={{ top: isChecked ? '13vw' : '0vw' }}><Forensic /></div>
+                    <div className="corporate-section" style={{ top: isChecked? '-22vw':'-7.5vw' }}><CorporateFillings /></div>
+                    <div className="forensic-section"><Forensic /></div>
                     <div className="grid-item triggerClass"><span className='hide-everything'>Employees</span></div>
                     <div className="grid-item"><span className='hide-everything'>Sentiment</span></div>
                     <div className="grid-item">
@@ -549,4 +548,4 @@ const FeaturesSection = () => {
     );
 };
 
-export {FeaturesSection, invalidateTL};
+export { FeaturesSection, invalidateTL };

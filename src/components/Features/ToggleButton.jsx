@@ -11,8 +11,10 @@ const ToggleButton = () => {
     const handleClick = () => {
         setChecked(document.querySelector("input[type=checkbox]").checked);
         console.log(isChecked);
-        invalidateTL();
-        ScrollTrigger.refresh();
+        setTimeout(() => {
+            invalidateTL();
+            ScrollTrigger.refresh();
+        }, 300);
     }
     return (
         <div className="wrapper">

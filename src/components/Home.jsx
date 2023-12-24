@@ -7,7 +7,7 @@ import Features from './Features/Features';
 const Home = () => {
     
     return (
-        <div>
+        <div className='bg-gradient'>
             <Navbar />
             <Header />
             <HeroBanner />

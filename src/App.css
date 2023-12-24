@@ -57,7 +57,7 @@ html {
 }
 
 body {
-  display:block;
+  display: block;
   background-color: #000000;
   color: white;
   font-family: 'Poppins-Regular', sans-serif;
@@ -99,6 +99,11 @@ hr {
   align-items: center;
 }
 
+.bg-gradient {
+  height: 210vh;
+  background: linear-gradient(to bottom, #000101 100vh, #03213B, #000101);
+}
+
 .skeleton-text {
   position: absolute;
   top: 30%;
@@ -106,6 +111,6 @@ hr {
   width: 100%;
 }
 
-.hide-everything{
+.hide-everything {
   opacity: 0;
 }

@@ -1,7 +1,7 @@
 .outer-container {
     position: absolute;
     height: 400vw;
-    top: -279vw;
+    top: -278vw;
     left: 0;
 }
 
@@ -10,7 +10,7 @@
     display: grid;
     grid-template-columns: repeat(30, 43.4vw);
     grid-template-rows: repeat(10, minmax(38.2vw, auto));
-    gap: 27px;
+    gap: 1.9vw;
     padding-left: 6vw;
     /* padding-top: 40.36vw; */
     transform-origin: 0% 100%;
