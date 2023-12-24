@@ -44,7 +44,7 @@ const Features = () => {
                     scrub: true,
                     start: "2% 90%",
                     end: "7% 60%",
-                    markers: false,
+                    markers: true,
                     invalidateOnRefresh: true,
                     onLeave: () => {
                         setLottiePlay(true);
