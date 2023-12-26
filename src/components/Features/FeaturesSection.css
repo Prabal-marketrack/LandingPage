@@ -29,7 +29,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 30px;
+    font-size: 2.08vw;
     color: #fff;
     width: 43.4vw;
     height: 38.2vw;
@@ -100,7 +100,7 @@
     scale: 1;
     top: 90.5%;
     left: 28vw;
-    font-size: 52.5px;
+    font-size: 3.65vw;
     z-index: 2;
 }
 

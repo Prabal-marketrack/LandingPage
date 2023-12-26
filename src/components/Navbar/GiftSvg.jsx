@@ -3,7 +3,7 @@ import React from 'react';
 const GiftSvg = () => {
     return (
         <div>
-            <svg id="Gift" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="20.5" height="18.75" viewBox="0 0 27.373 29.979">
+            <svg id="Gift" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="1.43vw" height="1.56vw" viewBox="0 0 27.373 29.979">
                 <defs>
                     <linearGradient id="linear-gradient" x2="1" y2="1" gradientUnits="objectBoundingBox">
                         <stop offset="0.07" stopColor="#f2ff81" />

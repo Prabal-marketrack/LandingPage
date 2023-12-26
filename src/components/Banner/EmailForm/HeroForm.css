@@ -1,12 +1,12 @@
 .hero-form {
     position: absolute;
     z-index: 1;
-    height: 48.5px;
+    height: 8.5vw;
     display: flex;
-    margin: auto auto;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
-    font-size: 16.5px;
+    font-size: 1.15vw;
     opacity: 0;
     animation: fade-in 3s forwards;
     animation-delay: var(--at);
@@ -20,34 +20,34 @@
 }
 
 .hero-form-heading {
-    padding-bottom: 11.5px;
+    padding-bottom: 0.5vw;
 }
 
 .hero-form-input {
     border-radius: 50px;
-    padding: 6.75px;
+    padding: 0.47vw;
+    padding-left: 2.5vw;
     background-color: #444444;
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 1vw;
 }
 
 .hero-form-input input {
     font-family: 'Poppins-Medium', sans-serif;
-    font-size: 16.5px;
-    padding-left: 28px;
-    width: 150px;
+    font-size: 1.15vw;
+    width: 9.27vw;
     background: none;
     border: none;
     color: #BBBBBB;
     background-color: #444444;
-    border-radius: 50px;
+    border-radius: 10px;
     outline: none;
     transition: width 0.3s;
 }
 
 .input-width-change input {
-    width: 210px;
+    width: 13.4vw;
 }
 
 input:-internal-autofill-selected {
@@ -63,9 +63,9 @@ input:-internal-autofill-selected {
 
 .hero-form-button {
     border-radius: 50px;
-    padding: 5px 7px 5px 12px;
+    padding: 0.37vw 0.5vw 0.37vw 0.78vw;
     width: fit-content;
-    font-size: 16.5px;
+    font-size: 1.15vw;
     font-family: 'Poppins-SemiBold', sans-serif;
     background-color: #278AFF;
     -webkit-transition: background-color 300ms linear;
@@ -76,6 +76,7 @@ input:-internal-autofill-selected {
     flex-direction: row;
     align-items: center;
     cursor: pointer;
+    gap: 0.3vw;
 }
 
 .hero-form-button:hover {
@@ -86,18 +87,18 @@ input:-internal-autofill-selected {
     color: white;
     background-color: #1A1A1A;
     border-radius: 50px;
-    margin-left: 5px;
-    padding: 11px;
+    padding: 0.8vw;
     transition: all 0.3s ease;
 }
 
 .hero-form-button:hover .arrow-icon {
-    font-size: 1.25rem;
-    padding: 9.3px;
+    font-size: 1.39vw;
+    padding: 0.68vw;
 }
 
 .error-message {
-    padding-top: 7px;
+    padding-top: 0.52vw;
+    font-size: 1.04vw;
     color: #FFA7A7;
 }
 
@@ -251,7 +252,7 @@ input:-internal-autofill-selected {
     .hero-form {
         height: 11.3vh;
         font-size: 2.93vw;
-        top: 4.68vh;
+        top: -16vh;
     }
 
     .hero-form-heading {

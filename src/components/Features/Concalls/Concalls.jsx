@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './Concalls.css';
 import { BsFillTelephoneFill } from 'react-icons/bs';
-import infosys from './../../../assets/infosys-img.png';
-import infosysOff from './../../../assets/infosys-off.png';
+import infosys from './../../../assets/infosys1.png';
+import infosysOff from './../../../assets/infosys2.png';
 import Card from './Card';
 import { useStateContext } from './../../../context/StateContext';
 import Lottie from 'lottie-react';
@@ -39,13 +39,13 @@ const Concalls = () => {
         <>
             <div className='concall hide-lottie'>
                 <div className='concall-heading'>
-                    <h1 className='concall-heading-text'>Conference Calls <BsFillTelephoneFill style={{ height: '20px' }} /></h1>
+                    <h1 className='concall-heading-text'>Conference Calls <BsFillTelephoneFill style={{ height: '1.4vw' }} /></h1>
                 </div>
                 <div className='concall-body'>
                     {!isChecked &&
                         <div className='concall-body-off'>
                             <div className='infosys-header-off'>
-                                <img src={infosysOff} alt="" height={'60px'} />
+                                <img src={infosysOff} alt="" style={{width: '6.9vw'}}/>
                                 <div className="verticalRule"></div>
                                 <span className='infosys-text'>Earnings Call Q1 2023</span>
                             </div>
@@ -66,7 +66,7 @@ const Concalls = () => {
                         <div className='concall-carousel' style={{ height: (currentIndex === 0) ? '36.81vw' : ((currentIndex === 1) && !isCardChecked) ? '32.85vw' : ((currentIndex === 1) && isCardChecked) ? '42.22vw' : '41.18vw' }}>
                             <div className="headermask"></div>
                             <div className='infosys-header'>
-                                <img src={infosys} alt="" height={'60px'} style={{ marginLeft: '108px' }} />
+                                <img src={infosys} alt="" style={{ marginLeft: '7.5vw', width: '6.9vw' }} />
                                 <div className="verticalRule"></div>
                                 <span className='infosys-text'>Earnings Call Q1 2023</span>
                             </div>
@@ -92,8 +92,8 @@ const Concalls = () => {
                             </div>
                         </div>
                         <div className='flex-col concall-footer'>
-                            <span className='blurred-text' style={{ fontSize: '30px' }}>Eliminates Noise</span>
-                            <span style={{ fontSize: '26.25px' }}>So You Can Focus on What Matters</span>
+                            <span className='blurred-text' style={{ fontSize: '2.08vw' }}>Eliminates Noise</span>
+                            <span style={{ fontSize: '1.83vw' }}>So You Can Focus on What Matters</span>
                         </div>
                     </div>}
                 </div>

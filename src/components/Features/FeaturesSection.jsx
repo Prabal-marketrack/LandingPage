@@ -71,12 +71,12 @@ const FeaturesSection = () => {
                     opacity: 0
                 }, "<")
                 .to('.hide-everything', {
-                    fontSize: '90px',
+                    fontSize: '6.25vw',
                     opacity: 1,
                 }, ">")
                 .to('.grid-container', {
                     scale: 0.26,
-                    gap: '40px',
+                    gap: '2.78vw',
                 }, "<")
                 .set('.footer', {
                     zIndex: 1,
@@ -84,7 +84,7 @@ const FeaturesSection = () => {
                 .addLabel("scaled")
                 .to('.grid-container', {
                     scale: scaleValue,
-                    gap: '60px',
+                    gap: '4.17vw',
                 }, ">")
                 .to('.hide-everything', {
                     opacity: 0,
@@ -541,7 +541,7 @@ const FeaturesSection = () => {
                     <span>Leave Complexity Behind.</span>
                 </div>
                 <div className='grid-email'>
-                    <HeroForm fontSize={'22.5px'} textColor={'#A5FF95'} animationTime={'2.5s'} />
+                    <HeroForm fontSize={'1.56vw'} textColor={'#A5FF95'} animationTime={'2.5s'} />
                 </div>
             </div>
         </>

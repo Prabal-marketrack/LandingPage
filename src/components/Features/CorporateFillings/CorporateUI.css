@@ -62,14 +62,14 @@
     padding-top: 0.75vw;
     padding-bottom: 0.75vw;
     gap: 0.75vw;
-    line-height: 1.2vw;
+    line-height: 1.1vw;
 }
 
 .filing-files {
     display: flex;
     flex-direction: row;
     padding-left: 0.6vw;
-    padding-top: 4px;
+    padding-top: 0.28vw;
     position: relative;
 }
 
@@ -83,7 +83,7 @@
     flex-direction: row;
     align-items: center;
     transition: all 0.2s ease-in;
-    gap: 5px;
+    gap: 0.34vw;
 }
 
 .file-pdf:hover {
