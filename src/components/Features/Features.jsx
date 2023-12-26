@@ -11,6 +11,7 @@ import { ScrollTrigger } from 'gsap/all';
 gsap.registerPlugin(ScrollTrigger);
 
 const Features = () => {
+    const windowWidth = window.width;
     const { isBannerVisible, setLottiePlay } = useStateContext();
     const el = useRef();
     const tl = useRef();
@@ -60,7 +61,7 @@ const Features = () => {
                     ease: 'power2.in',
                 })
                 .to(".vertical-line", {
-                    height: '18.5vh',
+                    height: (windowWidth <= 475) ? '6.16vh' : "9.3vw",
                     ease: 'power1.in'
                 })
                 .to(".box2", {
@@ -73,7 +74,7 @@ const Features = () => {
                 })
         }, el);
         return () => ctx.revert();
-    }, [setLottiePlay]);
+    }, [setLottiePlay, windowWidth]);
 
 
 

@@ -8,14 +8,14 @@ const Navbar = () => {
   const [triggered, setTriggered] = useState(false);
   const [isNavbarEmailFocused, setNavbarEmailFocus] = useState(false);
   const [isEmailHover, setEmailHoverState] = useState(false);
-
+  const windowWidth = window.innerWidth;
   const handleScroll = () => {
     const element = document.getElementById('trigger-element');
     const elementPosition = element.getBoundingClientRect();
     const windowHeight = window.innerHeight;
     const triggerPoint = windowHeight;
 
-    if (elementPosition.bottom <= triggerPoint) {
+    if (elementPosition.bottom <= triggerPoint && windowWidth>475) {
       setTriggered(true);
     } else {
       setTriggered(false);
@@ -59,14 +59,14 @@ const Navbar = () => {
             {isEmailHover ? <div className="email-hover-state">
               <input type="email" placeholder={isNavbarEmailFocused ? '' : 'Enter Your Email'} onFocus={handleNavbarEmailFocus} onBlur={() => { setNavbarEmailFocus(false) }} />
               <span className='email-arrow-button'>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20.3" height="13.214" viewBox="0 0 20.3 13.214">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.04vw" height="0.67vw" viewBox="0 0 20.3 13.214">
                   <path id="Icon_ionic-md-return-left" data-name="Icon ionic-md-return-left" d="M20.143,8.63v4.6H6.281l3.768-3.848L8.567,7.875,2.25,14.3l6.317,6.429,1.482-1.509L6.281,15.375H22.25V8.63Z" transform="translate(-2.075 -7.697)" stroke="#1a1a1a" strokeWidth="0.25" />
                 </svg>
 
               </span>
             </div> : <div className="email-default-state">
               <span className='nav-email-text'>Get Exclusive Benefits</span>
-              <div style={{ paddingLeft: '6px' }}>
+              <div style={{ paddingLeft: '0.5vw' }}>
                 <GiftSvg />
               </div>
             </div>

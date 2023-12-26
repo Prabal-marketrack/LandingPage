@@ -1,5 +1,5 @@
 nav {
-    height: 11vh;
+    height: 5.56vw;
     transition: all 0.2s ease-in;
 }
 
@@ -12,7 +12,7 @@ nav {
 }
 
 .navbar {
-    height: 11vh;
+    height: 5.56vw;
     display: flex;
     position: absolute;
 }
@@ -109,7 +109,7 @@ nav {
 
 .navbar-2 {
     position: fixed;
-    height: 11vh;
+    height: 5.56vw;
     width: 100%;
     /* padding-left: 28.5px; */
     display: flex;
@@ -121,7 +121,7 @@ nav {
 .navbar-mask {
     position: absolute;
     width: 100%;
-    height: 11vh;
+    height: 5.56vw;
     background-color: #fff;
     opacity: 10%;
 }
@@ -129,14 +129,14 @@ nav {
 .nav-email-form {
     position: fixed;
     right: 2vw;
-    height: 6.7vh;
+    height: 3.33vw;
     width: 16.4vw;
     border-radius: 50px;
     transition: all 0.5s ease;
 }
 
 .email-default-state {
-    height: 6.7vh;
+    height: 3.33vw;
     width: 16.4vw;
     border-radius: 50px;
     background-color: #278AFF;
@@ -154,7 +154,7 @@ nav {
 
 .email-hover-state {
     background-color: #444444;
-    height: 6.7vh;
+    height: 3.33vw;
     width: 14.7vw;
     border-radius: 50px;
     display: flex;
@@ -168,10 +168,10 @@ nav {
     outline: none;
     color: #fff;
     width: 9.8vw;
-    padding: 7px 10px;
+    padding: 0.48vw 0.76vw;
     font-family: 'Poppins-SemiBold';
     font-size: 1.15vw;
-    margin-right: 6px;
+    margin-right: 0.42vw;
 }
 
 .email-hover-state input::placeholder {
