@@ -66,7 +66,7 @@ const Concalls = () => {
                         </div>
                     }
                     {isChecked && <div className='concall-body-on flex-col'>
-                        <div className='concall-carousel' style={(windowWidth<=475)?{ height: (currentIndex === 0) ? '79.88vw' : ((currentIndex === 1) && !isCardChecked) ? '71.28vw' : ((currentIndex === 1) && isCardChecked) ? '91.6vw' : '89.36vw' }:{ height: (currentIndex === 0) ? '36.81vw' : ((currentIndex === 1) && !isCardChecked) ? '32.85vw' : ((currentIndex === 1) && isCardChecked) ? '42.22vw' : '41.18vw' }}>
+                        <div className='concall-carousel' style={(windowWidth<=600)?{ height: (currentIndex === 0) ? '79.88vw' : ((currentIndex === 1) && !isCardChecked) ? '71.28vw' : ((currentIndex === 1) && isCardChecked) ? '91.6vw' : '89.36vw' }:{ height: (currentIndex === 0) ? '36.81vw' : ((currentIndex === 1) && !isCardChecked) ? '32.85vw' : ((currentIndex === 1) && isCardChecked) ? '42.22vw' : '41.18vw' }}>
                             <div className="headermask"></div>
                             <div className='infosys-header'>
                                 <img src={infosys} alt="" />

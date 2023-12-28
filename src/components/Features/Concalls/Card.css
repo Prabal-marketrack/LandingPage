@@ -84,7 +84,7 @@
     background-color: #707070;
 }
 
-@media (max-width: 475px) {
+@media (max-width: 600px) {
     .card {
         width: 63vw;
     }

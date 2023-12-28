@@ -196,7 +196,7 @@ nav {
 
 /* Mobile design css */
 
-@media (max-width: 475px) {
+@media (max-width: 600px) {
     nav {
         padding-top: 6.3vh;
         height: 17vw;
