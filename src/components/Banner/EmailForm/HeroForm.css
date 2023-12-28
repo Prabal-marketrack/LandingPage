@@ -111,23 +111,24 @@ input:-internal-autofill-selected {
 
 .already-registered {
     border-radius: 50px;
-    padding: 6.75px;
+    padding: 0.83vw;
     height: inherit;
     background-color: #002C4B;
     display: flex;
     flex-direction: row;
-    width: 445px;
+    width: 30.15vw;
     font-family: 'Poppins-Medium';
-    font-size: 15.75px;
+    font-size: 1.09vw;
 }
 
 .height-after {
-    height: 72px;
+    height: 5.05vw;
 }
 
 .tick {
     display: flex;
     flex-direction: row;
+    align-items: center;
     margin: auto;
 }
 
@@ -146,82 +147,24 @@ input:-internal-autofill-selected {
 
 .registered-check {
     color: #008EFA;
-    width: 48.5px;
-    height: 48.5px;
+    width: 3.38vw;
+    height: 3.38vw;
     position: absolute;
-    right: 10px;
+    animation: check-animate 0.5s linear forwards;
 }
 
 .registered-message-text {
     animation: fadeIn 1s;
 }
 
-@keyframes fadeIn {
+@keyframes check-animate {
     0% {
-        opacity: 0;
+        right: 15vw;
     }
 
     100% {
-        opacity: 1;
+        right: 0.73vw;
     }
-}
-
-@keyframes moving {
-    0% {
-        width: 0%;
-        opacity: 0%;
-    }
-
-    100% {
-        width: 60%;
-        opacity: 1;
-    }
-}
-
-/* Successfully Registered Styles */
-
-.success {
-    border-radius: 50px;
-    padding: 6.75px;
-    height: inherit;
-    background-color: #1B331A;
-    display: flex;
-    flex-direction: row;
-    width: 600px;
-    font-family: 'Poppins-Medium';
-    font-size: 15.75px;
-}
-
-.tick {
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-}
-
-.success-message {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    align-items: center;
-    color: #ACE598;
-    padding-left: 15px;
-    padding-right: 15px;
-    opacity: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 0%;
-    animation: moving 0.5s linear forwards;
-}
-
-.success-check {
-    color: #89FF60;
-    width: 48.5px;
-    height: 48.5px;
-    position: relative;
-}
-
-.success-message-text {
-    animation: fadeIn 1s;
 }
 
 @keyframes fadeIn {
@@ -246,6 +189,47 @@ input:-internal-autofill-selected {
     }
 }
 
+/* Successfully Registered Styles */
+
+.success {
+    border-radius: 50px;
+    padding: 0.83vw;
+    height: inherit;
+    background-color: #1B331A;
+    display: flex;
+    flex-direction: row;
+    width: 42vw;
+    font-family: 'Poppins-Medium';
+    font-size: 1.09vw;
+}
+
+.success-message {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    color: #ACE598;
+    padding-left: 2.6vw;
+    padding-right: 2.6vw;
+    opacity: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0%;
+    animation: moving 0.5s linear forwards;
+}
+
+.success-check {
+    color: #89FF60;
+    width: 3.38vw;
+    height: 3.38vw;
+    position: absolute;
+    animation: check-animate 0.5s linear forwards;
+}
+
+.success-message-text {
+    animation: fadeIn 1s;
+}
+
 /* Mobile Responsive Design */
 
 @media (max-width: 475px) {
@@ -256,22 +240,86 @@ input:-internal-autofill-selected {
     }
 
     .hero-form-heading {
-        padding-bottom: 11px;
+        padding-bottom: 2.3vw;
     }
 
     .hero-form-input {
-        padding: 5px;
+        padding: 1.38vw;
+        padding-left: 5.4vw;
+        gap: 4.34vw;
     }
 
     .hero-form-input input {
-        font-size: 3.34vw;
-        padding-left: 5.4vw;
-        width: 30vw;
+        font-size: 3.1vw;
+        width: 27.2vw;
+    }
+
+    .input-width-change input {
+        width: 35vw;
     }
 
     .hero-form-button {
-        font-size: 3.4vw;
-        padding: 4px 5px;
-        padding-left: 10px;
+        font-size: 3.1vw;
+        padding: 1.1vw 1.5vw 1.1vw 4.05vw;
+        gap: 0.9vw;
+    }
+
+    .arrow-icon {
+        padding: 2.4vw;
+    }
+
+    .hero-form-button:hover .arrow-icon {
+        font-size: 4vw;
+        padding: 2vw;
+    }
+
+    .default-message {
+        font-size: 2.5vw;
+    }
+
+    .error-message {
+        padding-top: 1.87vw;
+        font-size: 2.5vw;
+    }
+
+    .error-message svg {
+        width: 2.4vw;
+        height: 1.83vw;
+    }
+
+    .already-registered {
+        padding: 2.5vw;
+        width: 85vw;
+        font-size: 2.9vw;
+    }
+
+    .height-after {
+        height: 15vw;
+    }
+
+    .registered-check {
+        width: 9vw;
+        height: 9vw;
+    }
+
+    @keyframes check-animate {
+        0% {
+            right: 70vw;
+        }
+
+        100% {
+            right: 2.5vw;
+        }
+    }
+
+    .success {
+        padding: 2.5vw;
+        width: 90vw;
+        font-size: 2.9vw;
+    }
+
+    .success-check {
+        width: 9vw;
+        height: 9vw;
     }
 }

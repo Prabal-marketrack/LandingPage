@@ -20,7 +20,33 @@
     font-size: 2.09vw;
     font-weight: 400;
 }
+
+.corporate-heading img{
+    height: 2.08vw;
+    margin-top: 0.35vw;
+}
+
 .corporate-lottie{
     padding-top: 2.09vw;
     scale: 1.1;
+}
+
+@media (max-width: 475px) {
+    .corporate{
+        gap: 4.23vw;
+    }
+    .corporate-heading{
+        margin-top: 3.6vw;
+        margin-bottom: 1.5vw;
+    }
+    .corporate-heading-text{
+        font-size: 4vw;
+    }
+    .corporate-heading img{
+        height: 4.5vw;
+        margin-top: 1vw;
+    }
+    .corporate-lottie{
+        padding-top: 4.5vw;
+    }
 }

@@ -61,7 +61,7 @@ const CorporateUI = () => {
                     <span className="impact-text">for Quick Look</span>
                 </div>
                 <div className="arrow">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="3vw" height="3.4vw" viewBox="0 0 43.155 48.939">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.155 48.939">
                         <defs>
                             <filter id="Arrow" x="0" y="0" width="43.155" height="48.939" filterUnits="userSpaceOnUse">
                                 <feOffset dx="10" dy="5" input="SourceAlpha" />

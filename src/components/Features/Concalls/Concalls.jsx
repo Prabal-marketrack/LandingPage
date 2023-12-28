@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './Concalls.css';
 import { BsFillTelephoneFill } from 'react-icons/bs';
+import { IoCall } from "react-icons/io5";
+
 import infosys from './../../../assets/infosys1.png';
 import infosysOff from './../../../assets/infosys2.png';
 import Card from './Card';
@@ -14,6 +16,7 @@ const Concalls = () => {
     const totalSlides = 3;
     const [currentIndex, setCurrentIndex] = useState(3);
     const concallRef = useRef(null);
+    const windowWidth = window.innerWidth;
 
     useEffect(() => {
         if (!isChecked && isLottiePlay) {
@@ -39,13 +42,13 @@ const Concalls = () => {
         <>
             <div className='concall hide-lottie'>
                 <div className='concall-heading'>
-                    <h1 className='concall-heading-text'>Conference Calls <BsFillTelephoneFill style={{ height: '1.4vw' }} /></h1>
+                    <h1 className='concall-heading-text'>Conference Calls <IoCall /></h1>
                 </div>
                 <div className='concall-body'>
                     {!isChecked &&
                         <div className='concall-body-off'>
                             <div className='infosys-header-off'>
-                                <img src={infosysOff} alt="" style={{width: '6.9vw'}}/>
+                                <img src={infosysOff} alt="" />
                                 <div className="verticalRule"></div>
                                 <span className='infosys-text'>Earnings Call Q1 2023</span>
                             </div>
@@ -57,16 +60,16 @@ const Concalls = () => {
                                     loop={false}
                                 />
                             </div>
-                            <div style={{ position: 'relative', paddingTop: '4.86vw' }}>
-                                <span style={{ fontSize: '2.43vw' }}>25 Pages</span>
+                            <div className='concall-off-footer'>
+                                <span>25 Pages</span>
                             </div>
                         </div>
                     }
                     {isChecked && <div className='concall-body-on flex-col'>
-                        <div className='concall-carousel' style={{ height: (currentIndex === 0) ? '36.81vw' : ((currentIndex === 1) && !isCardChecked) ? '32.85vw' : ((currentIndex === 1) && isCardChecked) ? '42.22vw' : '41.18vw' }}>
+                        <div className='concall-carousel' style={(windowWidth<=475)?{ height: (currentIndex === 0) ? '79.88vw' : ((currentIndex === 1) && !isCardChecked) ? '71.28vw' : ((currentIndex === 1) && isCardChecked) ? '91.6vw' : '89.36vw' }:{ height: (currentIndex === 0) ? '36.81vw' : ((currentIndex === 1) && !isCardChecked) ? '32.85vw' : ((currentIndex === 1) && isCardChecked) ? '42.22vw' : '41.18vw' }}>
                             <div className="headermask"></div>
                             <div className='infosys-header'>
-                                <img src={infosys} alt="" style={{ marginLeft: '7.5vw', width: '6.9vw' }} />
+                                <img src={infosys} alt="" />
                                 <div className="verticalRule"></div>
                                 <span className='infosys-text'>Earnings Call Q1 2023</span>
                             </div>
@@ -92,8 +95,8 @@ const Concalls = () => {
                             </div>
                         </div>
                         <div className='flex-col concall-footer'>
-                            <span className='blurred-text' style={{ fontSize: '2.08vw' }}>Eliminates Noise</span>
-                            <span style={{ fontSize: '1.83vw' }}>So You Can Focus on What Matters</span>
+                            <span className='blurred-text'>Eliminates Noise</span>
+                            <span>So You Can Focus on What Matters</span>
                         </div>
                     </div>}
                 </div>
@@ -101,7 +104,7 @@ const Concalls = () => {
             <div className="skeleton-text hide-everything">
                 <div className="flex-col alignItems-center">
                     <span>Concalls</span>
-                    <BsFillTelephoneFill/>
+                    <BsFillTelephoneFill />
                 </div>
             </div>
         </>

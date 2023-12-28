@@ -114,3 +114,10 @@ hr {
 .hide-everything {
   opacity: 0;
 }
+
+@media (max-width: 475px) {
+  .bg-gradient {
+    height: 250vw;
+    background: linear-gradient(to bottom, #000101 85vw, #03213B, #000101);
+  }
+}

@@ -6,7 +6,7 @@ import { useStateContext } from '../../../context/StateContext';
 
 
 const Card = ({ index }) => {
-    const {isCardChecked, setCardChecked} = useStateContext();
+    const { isCardChecked, setCardChecked } = useStateContext();
     const handleClick = () => {
         setCardChecked(!isCardChecked);
     }
@@ -17,8 +17,8 @@ const Card = ({ index }) => {
                 <div className='card-header flex-row'>
                     <img src={nilanjanRoy} alt="" />
                     <div className='flex-col'>
-                        <span style={{ fontSize: '1.04vw', color: '#DDDDDD' }}>Nilanjan Roy</span>
-                        <span style={{ fontSize: '1vw', color: '#AAAAAA' }}>CFO</span>
+                        <span className='card-header-name'>Nilanjan Roy</span>
+                        <span className='card-header-position'>CFO</span>
                     </div>
                 </div>
                 <div className='card-content flex-col'>
@@ -60,8 +60,8 @@ const Card = ({ index }) => {
                     <div className='card-header flex-row'>
                         <img src={salilParekh} alt="" />
                         <div className='flex-col'>
-                            <span style={{ fontSize: '1.04vw', color: '#DDDDDD' }}>Salil Parekh</span>
-                            <span style={{ fontSize: '1vw', color: '#AAAAAA' }}>MD & CEO</span>
+                            <span className='card-header-name'>Salil Parekh</span>
+                            <span className='card-header-position'>MD & CEO</span>
                         </div>
                     </div>
                 </label>
@@ -106,8 +106,8 @@ const Card = ({ index }) => {
                     <div className='card-header flex-row'>
                         <img src={nilanjanRoy} alt="" />
                         <div className='flex-col'>
-                            <span style={{ fontSize: '1.04vw', color: '#DDDDDD' }}>Nilanjan Roy</span>
-                            <span style={{ fontSize: '1vw', color: '#AAAAAA' }}>CFO</span>
+                            <span className='card-header-name'>Nilanjan Roy</span>
+                            <span className='card-header-position'>CFO</span>
                         </div>
                     </div>
                 </label>
@@ -137,8 +137,8 @@ const Card = ({ index }) => {
                 <div className='card-header flex-row'>
                     <img src={salilParekh} alt="" />
                     <div className='flex-col'>
-                        <span style={{ fontSize: '1.04vw', color: '#DDDDDD' }}>Salil Parekh</span>
-                        <span style={{ fontSize: '1vw', color: '#AAAAAA' }}>MD & CEO</span>
+                        <span className='card-header-name'>Salil Parekh</span>
+                        <span className='card-header-position'>MD & CEO</span>
                     </div>
                 </div>
                 <div className='card-content flex-col'>

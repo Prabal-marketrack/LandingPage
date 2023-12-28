@@ -7,13 +7,13 @@ import ArrowSvg from './ArrowSvg';
 import ToggleButton from './ToggleButton';
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/all';
+import FeaturesSectionMobile from './FeaturesSectionMobile';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Features = () => {
-    const windowWidth = window.width;
+    const windowWidth = window.innerWidth;
     const { isBannerVisible, setLottiePlay } = useStateContext();
-    const el = useRef();
     const tl = useRef();
     const [isTypingTriggered, setTypingTriggered] = useState(false);
     const handleScroll = () => {
@@ -41,11 +41,12 @@ const Features = () => {
             tl.current = gsap.timeline({
                 scrollTrigger: {
                     id: "line_anim",
-                    trigger: el.current,
+                    trigger: ".about",
                     scrub: true,
-                    start: "2% 90%",
-                    end: "7% 60%",
-                    markers: true,
+                    start: "start 90%",
+                    end: "start 50%",
+                    endTrigger: '.box3',
+                    markers: false,
                     invalidateOnRefresh: true,
                     onLeave: () => {
                         setLottiePlay(true);
@@ -61,7 +62,7 @@ const Features = () => {
                     ease: 'power2.in',
                 })
                 .to(".vertical-line", {
-                    height: (windowWidth <= 475) ? '6.16vh' : "9.3vw",
+                    height: (windowWidth <= 475) ? '13.33vw' : "9.3vw",
                     ease: 'power1.in'
                 })
                 .to(".box2", {
@@ -72,7 +73,7 @@ const Features = () => {
                     opacity: 1,
                     ease: 'power2.in',
                 })
-        }, el);
+        });
         return () => ctx.revert();
     }, [setLottiePlay, windowWidth]);
 
@@ -82,7 +83,7 @@ const Features = () => {
         <div className={`gradient-background ${isBannerVisible ? 'fade-in' : ''}`}>
             <div className='features-section'>
                 <div className='fade_rule'></div>
-                <div className='features-body' ref={el}>
+                <div className='features-body'>
                     <div className='about' >
                         <div className="heading-container text box1">
                             With <h1 className="brand-heading text">MARKETRACK</h1>
@@ -104,7 +105,8 @@ const Features = () => {
                         </div>
                     </div>
                     <div className="box3">
-                        <FeaturesSection />
+                        {(windowWidth <= 475) && <FeaturesSectionMobile />}
+                        {(windowWidth > 475) && <FeaturesSection />}
                     </div>
                 </div>
             </div>

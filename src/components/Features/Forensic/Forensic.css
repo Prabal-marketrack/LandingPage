@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 1.6vw;
+    padding: 1.6vw;
 }
 
 .forensic-heading {
@@ -15,4 +15,14 @@
 .forensic-video {
     margin-top: 1.39vw;
     align-items: center;
+}
+
+@media (max-width: 475px) {
+    .forensic{
+        font-size: 4vw;
+        padding: 4vw;
+    }
+    .forensic-heading{
+        margin-bottom: 8vw;
+    }
 }

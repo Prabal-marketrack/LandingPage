@@ -1,16 +1,6 @@
 import React, { useState } from 'react';
 import { BsArrowReturnLeft, BsFillCheckCircleFill, BsFillHeartFill } from 'react-icons/bs';
 import './HeroForm.css';
-import firebaseConfig from './firebaseConfig';
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/firestore';
-import { v4 as uuidv4 } from 'uuid';
-
-
-if (!firebase.apps.length) {
-    firebase.initializeApp(firebaseConfig);
-}
-
 
 const HeroForm = ({ fontSize, textColor, animationTime }) => {
     const [isInputFocused, setInputFocused] = useState(false);
@@ -69,27 +59,25 @@ const HeroForm = ({ fontSize, textColor, animationTime }) => {
             return;
         }
         try {
-            const usersCollection = firebase.firestore().collection('users');
-            const existingUserQuery = await usersCollection.where('email', '==', email).get();
-
-            if (!existingUserQuery.empty) {
+            const response = await fetch('http://Marketrack-backend-env-1.eba-qjtmt2yc.ap-south-1.elasticbeanstalk.com/addOnboarded', {
+                method: "POST",
+                body: JSON.stringify({ email: email }),
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            const result = await response.json();
+            console.log(result);
+            if (response.status === 409) {
                 console.log('User with this email already exists');
                 setAlreadyRegistered(true);
                 return;
             }
-
-            const userId = uuidv4();
-            const userData = {
-                email,
-                createdAt: Date.now(),
-                updatedAt: Date.now(),
-                isEmailSent: false,
-            };
-
-            await usersCollection.doc(userId).set(userData);
-            console.log('User data stored in Firebase Firestore');
-            setSuccess(true);
-            setEmail(''); // Clear input field
+            else if (response.status === 201) {
+                console.log('User Email stored in Database');
+                setSuccess(true);
+            }
+            setEmail('');
         } catch (error) {
             console.error('Error storing user data:', error);
         }
@@ -105,7 +93,7 @@ const HeroForm = ({ fontSize, textColor, animationTime }) => {
 
     return (
         <div className={`hero-form ${(isAlreadyRegistered || isSuccess) && 'height-after'}`} style={{ '--at': animationTime }}>
-            <span className='hero-form-heading' style={{ display: isAlreadyRegistered ? 'none' : 'inherit', fontSize: fontSize }}>Enjoy Early Exclusive Benefits,<span style={{ color: textColor }}>&nbsp;Absolutely Free!</span></span>
+            <span className='hero-form-heading' style={{ display: (isAlreadyRegistered || isSuccess) ? 'none' : 'inherit', fontSize: fontSize }}>Enjoy Early Exclusive Benefits,<span style={{ color: textColor }}>&nbsp;Absolutely Free!</span></span>
             {!(isAlreadyRegistered || isSuccess) && <div className={`hero-form-input ${invalidEmailClass} ${animateWidth}`}>
                 <input
                     type="email"
@@ -129,7 +117,7 @@ const HeroForm = ({ fontSize, textColor, animationTime }) => {
                 <div className='tick'>
                     <div className='registered-message'>
                         <span className='registered-message-text'>{alreadyRegisteredMessage1[Math.floor(Math.random() * alreadyRegisteredMessage1.length)]}</span>
-                        <span className='registered-message-text'>{alreadyRegisteredMessage2[Math.floor(Math.random() * alreadyRegisteredMessage2.length)]} Thank You <BsFillHeartFill style={{ height: '15px' }} /></span>
+                        <span className='registered-message-text'>{alreadyRegisteredMessage2[Math.floor(Math.random() * alreadyRegisteredMessage2.length)]} Thank You <BsFillHeartFill style={{ height: '1.04vw' }} /></span>
                     </div>
                     <BsFillCheckCircleFill className='registered-check' />
                 </div>
@@ -137,16 +125,16 @@ const HeroForm = ({ fontSize, textColor, animationTime }) => {
             {isSuccess && <div className='success'>
                 <div className='tick'>
                     <div className='success-message'>
-                        <span className='success-message-text'>Thank You for Being First <BsFillHeartFill style={{ height: '15px' }} /></span>
-                        <span className='success-message-text'>Exciting updates await, un-complicating your investing journey</span>
+                        <span className='success-message-text'>Thank You for Being First <BsFillHeartFill style={{ height: '1.04vw' }} /></span>
+                        <span className='success-message-text'>Exciting updates await, Uncomplicated Investing!</span>
                     </div>
                     <BsFillCheckCircleFill className='success-check' />
                 </div>
             </div>}
-            {!isEmptyError && !isInvalidError && <span className='error-message' style={{ fontFamily: 'Poppins', fontWeight: '500', fontSize: '1.04vw', textAlign: 'left', color: '#aaa' }}>
+            {!isEmptyError && !isInvalidError && <span className='error-message' style={{ fontFamily: 'Poppins-Medium', fontWeight: '500', fontSize: '1.04vw', textAlign: 'left', color: '#aaa' }}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="0.8vw" height="0.6vw" viewBox="0 0 15.141 11.595">
                     <path id="Icon_ionic-ios-checkmark" data-name="Icon ionic-ios-checkmark" d="M25.5,13.563l-1.237-1.273a.266.266,0,0,0-.2-.084h0a.255.255,0,0,0-.2.084l-8.578,8.641L12.164,17.81a.272.272,0,0,0-.394,0l-1.252,1.252a.28.28,0,0,0,0,.4L14.456,23.4a1.245,1.245,0,0,0,.823.4,1.3,1.3,0,0,0,.816-.387H16.1l9.4-9.45A.3.3,0,0,0,25.5,13.563Z" transform="translate(-10.434 -12.206)" fill="#aaa" />
-                </svg><span style={{ paddingLeft: '0.46vw', color: textColor }}>No Spam Ever, Our Promise</span>
+                </svg><span className='default-message' style={{ paddingLeft: '0.46vw', color: textColor }}>No Spam Ever, Our Promise</span>
             </span>}
             {isEmptyError && <span className='error-message'>{emptyErrorMessages[Math.floor(Math.random() * emptyErrorMessages.length)]}</span>}
             {isInvalidError && <span className='error-message'>{invalidErrorMessages[Math.floor(Math.random() * invalidErrorMessages.length)]}</span>}
