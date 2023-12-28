@@ -31,7 +31,7 @@
     scale: 1.1;
 }
 
-@media (max-width: 475px) {
+@media (max-width: 600px) {
     .corporate{
         gap: 4.23vw;
     }

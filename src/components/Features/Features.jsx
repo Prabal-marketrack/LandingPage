@@ -62,7 +62,7 @@ const Features = () => {
                     ease: 'power2.in',
                 })
                 .to(".vertical-line", {
-                    height: (windowWidth <= 475) ? '13.33vw' : "9.3vw",
+                    height: (windowWidth <= 600) ? '13.33vw' : "9.3vw",
                     ease: 'power1.in'
                 })
                 .to(".box2", {
@@ -105,8 +105,8 @@ const Features = () => {
                         </div>
                     </div>
                     <div className="box3">
-                        {(windowWidth <= 475) && <FeaturesSectionMobile />}
-                        {(windowWidth > 475) && <FeaturesSection />}
+                        {(windowWidth <= 600) && <FeaturesSectionMobile />}
+                        {(windowWidth > 600) && <FeaturesSection />}
                     </div>
                 </div>
             </div>

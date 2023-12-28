@@ -232,7 +232,7 @@ input:-internal-autofill-selected {
 
 /* Mobile Responsive Design */
 
-@media (max-width: 475px) {
+@media (max-width: 600px) {
     .hero-form {
         height: 11.3vh;
         font-size: 2.93vw;
@@ -274,6 +274,7 @@ input:-internal-autofill-selected {
     }
 
     .default-message {
+        font-family: 'Poppins-Medium';
         font-size: 2.5vw;
     }
 

@@ -177,7 +177,7 @@
 }
 
 
-@media (max-width: 475px) {
+@media (max-width: 600px) {
     .corporate-ui-element {
         width: 80vw;
         height: 68vw;

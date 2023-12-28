@@ -134,7 +134,7 @@
     }
 }
 
-@media (max-width: 475px){
+@media (max-width: 600px){
     .capabilities{
         height: 8.8vw;
     }

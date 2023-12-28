@@ -30,7 +30,7 @@
     width: 58vw;
 }
 
-@media (max-width: 475px) {
+@media (max-width: 600px) {
     .news-heading {
         margin-top: 5vw;
     }

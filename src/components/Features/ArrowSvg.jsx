@@ -2,7 +2,7 @@ import React from 'react'
 
 const ArrowSvg = () => {
     const windowWidth = window.innerWidth;
-    const ismobile = (windowWidth<=475);
+    const ismobile = (windowWidth<=600);
     return (
         <div>
             <svg xmlns="http://www.w3.org/2000/svg" width={ismobile?"6.4vw":"1.77vw"} height={ismobile?"11.3vw":"3vw"} viewBox="0 0 36.528 62.299" style={{ paddingTop: '1.9vh', paddingLeft: '0.6vw' }}>

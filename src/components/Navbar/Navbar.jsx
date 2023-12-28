@@ -15,7 +15,7 @@ const Navbar = () => {
     const windowHeight = window.innerHeight;
     const triggerPoint = windowHeight;
 
-    if (elementPosition.bottom <= triggerPoint && windowWidth>475) {
+    if (elementPosition.bottom <= triggerPoint && windowWidth>600) {
       setTriggered(true);
     } else {
       setTriggered(false);

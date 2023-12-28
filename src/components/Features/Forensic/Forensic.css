@@ -17,7 +17,7 @@
     align-items: center;
 }
 
-@media (max-width: 475px) {
+@media (max-width: 600px) {
     .forensic{
         font-size: 4vw;
         padding: 4vw;

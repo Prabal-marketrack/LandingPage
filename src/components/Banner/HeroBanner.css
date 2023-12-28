@@ -36,7 +36,7 @@
     animation: easeIn 3s ease-in;
 }
 
-@media (max-width: 475px) {
+@media (max-width: 600px) {
     .banner {
         margin-top: 20vh;
     }
