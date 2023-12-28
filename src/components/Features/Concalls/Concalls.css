@@ -13,6 +13,7 @@
     font-family: 'Poppins-Regular';
     font-size: 2.09vw;
     font-weight: 400;
+    text-align: center;
 }
 
 .concall-body {
@@ -39,11 +40,21 @@
     align-items: center;
 }
 
+.infosys-header-off img {
+    width: 6.9vw;
+}
+
 .concall-lottie {
     position: relative;
     height: 16.18vw;
     width: 35.14vw;
     padding-top: 2.08vw;
+}
+
+.concall-off-footer {
+    position: relative;
+    padding-top: 4.86vw;
+    font-size: 2.43vw;
 }
 
 /* CSS for toggle button off state - Ends*/
@@ -79,6 +90,11 @@
     position: absolute;
     top: 0px;
     height: 4.86vw;
+}
+
+.infosys-header img {
+    margin-left: 7.5vw;
+    width: 6.9vw;
 }
 
 .verticalRule {
@@ -151,8 +167,113 @@
     align-items: center;
     margin-top: 1.39vw;
     gap: 0.35vw;
+    font-size: 1.83vw;
 }
 
 .blurred-text {
     filter: blur(1.5px);
+    font-size: 2.08vw;
+}
+
+
+@media (max-width: 475px) {
+    .concall-heading {
+        margin: 0;
+        padding-top: 5vw;
+    }
+
+    .concall-heading-text {
+        font-size: 4vw;
+    }
+
+    .concall-body-off {
+        margin-top: 4vw;
+        gap: 1vw;
+    }
+
+    .infosys-header-off {
+        padding: 1vw;
+    }
+
+    .infosys-header-off img {
+        width: 18vw;
+    }
+
+    .concall-lottie {
+        width: 80vw;
+        padding-top: 2.08vw;
+    }
+
+    .verticalRule {
+        height: 8vw;
+        margin-left: 2.4vw;
+    }
+
+    .infosys-text {
+        font-size: 3.8vw;
+        margin-left: 4vw;
+    }
+
+    .concall-off-footer {
+        margin-top: 26vw;
+        font-size: 6vw;
+    }
+
+    .concall-body-on {
+        margin-bottom: 3vw;
+        margin-top: 3vw;
+    }
+
+    .concall-carousel {
+        height: max-content;
+    }
+
+    .headermask {
+        height: 10.5vw;
+        width: 80vw;
+        border-radius: 4px;
+    }
+
+    .infosys-header {
+        top: 0;
+        height: 10.5vw;
+    }
+
+    .infosys-header img {
+        margin-left: 10vw;
+        width: 15vw;
+    }
+
+    .carousel-buttons {
+        padding: 2.4vw;
+    }
+
+    .carousel-button {
+        padding: 0.76vw 3vw;
+        font-size: 2.25vw;
+    }
+
+    .card-container {
+        margin-left: 6.6vw;
+    }
+
+    .carousel-dots {
+        bottom: 3vw;
+        margin-top: 5.4vw;
+    }
+
+    .carousel-dots .dot {
+        width: 1.13vw;
+        height: 1.13vw;
+    }
+
+    .concall-footer {
+        margin-top: 3vw;
+        gap: 0.76vw;
+        font-size: 4vw;
+    }
+
+    .blurred-text {
+        font-size: 5vw;
+    }
 }

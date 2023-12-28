@@ -23,6 +23,10 @@
     gap: 0.56vw;
 }
 
+.deepak-nitrite img {
+    height: 4.3vw;
+}
+
 .filing-1 {
     display: flex;
     flex-direction: row;
@@ -94,10 +98,12 @@
     width: 0.86vw;
     padding-left: 0.78vw;
 }
-.file-pdf-3{
+
+.file-pdf-3 {
     position: absolute;
     left: 40%;
 }
+
 .file-text {
     font-family: "Inter-Regular";
     font-size: 0.73vw;
@@ -120,7 +126,8 @@
     top: 0.5vw;
     left: 2.6vw;
 }
-.impact{
+
+.impact {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -132,16 +139,24 @@
     box-shadow: 7px 3px 20px #000000;
     margin-bottom: 2.78vw;
 }
-.impact-text{
+
+.impact-text {
     font-family: 'Poppins-Regular';
     font-size: 0.94vw;
     color: #FFFFFF;
 }
-.arrow{
+
+.arrow {
     position: absolute;
     top: 3.2vw;
     left: 42%;
 }
+
+.arrow svg {
+    width: 3vw;
+    height: 3.4vw;
+}
+
 .circle {
     width: 1.3vw;
     height: 1.3vw;
@@ -159,4 +174,111 @@
     width: 1px;
     height: 12vw;
     background-color: #707070;
+}
+
+
+@media (max-width: 475px) {
+    .corporate-ui-element {
+        width: 80vw;
+        height: 68vw;
+        padding: 2.8vw;
+        gap: 3vw;
+    }
+
+    .deepak-nitrite {
+        font-size: 2.3vw;
+        gap: 1.2vw;
+    }
+
+    .deepak-nitrite img {
+        height: 9vw;
+    }
+
+    .filing-date {
+        width: 9.8vw;
+        font-size: 2vw;
+    }
+
+    .filing-content {
+        width: 59vw;
+    }
+
+    .filing-content-heading {
+        font-size: 2.26vw;
+    }
+
+    .filing-content-description {
+        font-size: 1.87vw;
+        padding-left: 1.3vw;
+        padding-top: 1.63vw;
+        padding-bottom: 1.63vw;
+        gap: 1.63vw;
+        line-height: 2.4vw;
+    }
+
+    .filing-files {
+        padding-left: 1.3vw;
+        padding-top: 0.61vw;
+    }
+
+    .file-pdf {
+        width: 5.2vw;
+        height: 3.39vw;
+        border-radius: 2.26vw;
+        gap: 0.74vw;
+    }
+
+    .file-pdf:hover {
+        width: 20.6vw;
+    }
+
+    .file-pdf img {
+        width: 1.87vw;
+        padding-left: 1.7vw;
+    }
+
+    .file-pdf-3 {
+        left: 45%;
+    }
+
+    .file-text {
+        font-size: 1.6vw;
+    }
+
+    .vertical-bar {
+        top: 1.08vw;
+        left: 5.64vw;
+    }
+
+    .impact {
+        width: 24.5vw;
+        height: 7.8vw;
+        margin-bottom: 6vw;
+    }
+
+    .impact-text {
+        font-size: 2vw;
+    }
+
+    .arrow {
+        top: 7vw;
+    }
+
+    .arrow svg {
+        width: 6.5vw;
+        height: 7.4vw;
+    }
+
+    .circle {
+        width: 2.82vw;
+        height: 2.82vw;
+    }
+
+    .line-1 {
+        height: 25vw;
+    }
+
+    .line-2 {
+        height: 26vw;
+    }
 }

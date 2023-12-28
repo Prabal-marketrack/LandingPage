@@ -29,7 +29,7 @@ const CorporateFillings = () => {
             <div className='corporate hide-lottie'>
                 <div className='corporate-heading'>
                     <h1 className='corporate-heading-text'>Corporate Filings</h1>
-                    <img src={NSE} alt="" height={'30px'} style={{ marginTop: '5px' }} />
+                    <img src={NSE} alt="" />
                 </div>
                 {!showUIElement && <div className="corporate-lottie">
                     <Lottie
@@ -39,7 +39,7 @@ const CorporateFillings = () => {
                         loop={false}
                     />
                 </div>}
-                <div style={{ opacity: showUIElement ? '1' : '0' }}>
+                <div style={{ display: showUIElement ? '' : 'none' }}>
                     <CorporateUI />
                 </div>
             </div>

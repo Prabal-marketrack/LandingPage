@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     gap: 5px;
+    height: max-content;
 }
 
 .news-heading {
@@ -27,4 +28,19 @@
     position: absolute;
     top: -1.4vw;
     width: 58vw;
+}
+
+@media (max-width: 475px) {
+    .news-heading {
+        margin-top: 5vw;
+    }
+
+    .news-heading-text {
+        font-size: 4vw;
+    }
+
+    .news-lottie {
+        top: 0;
+        width: 130vw;
+    }
 }

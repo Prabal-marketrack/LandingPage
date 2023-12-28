@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 const ToggleButton = () => {
     const { isChecked, setChecked } = useStateContext();
     const handleClick = () => {
-        setChecked(document.querySelector("input[type=checkbox]").checked);
+        setChecked(document.querySelector(".wrapper input[type=checkbox]").checked);
         console.log(isChecked);
         setTimeout(() => {
             invalidateTL();

@@ -18,10 +18,11 @@
 
 .tab_label::after {
     content: "\276F";
-    width: 1em;
-    height: 1em;
+    width: 1.12vw;
+    height: 1.12vw;
     display: flex;
     align-items: center;
+    justify-content: center;
     transform: rotate(90deg);
     transition: all 0.1s;
 }
@@ -38,6 +39,16 @@
 .card-header img {
     width: 3.125vw;
     height: 3.125vw;
+}
+
+.card-header-name {
+    font-size: 1.04vw;
+    color: #DDDDDD;
+}
+
+.card-header-position {
+    font-size: 1vw;
+    color: #AAAAAA;
 }
 
 .card #cb1:checked~.content-box1 {
@@ -71,4 +82,53 @@
     margin-right: 0.7vw;
     width: 0.5px;
     background-color: #707070;
+}
+
+@media (max-width: 475px) {
+    .card {
+        width: 63vw;
+    }
+
+    .tab_label {
+        margin-top: 1.5vw;
+    }
+
+    .card-header {
+        gap: 1.36vw;
+        margin-bottom: 1.65vw;
+    }
+
+    .card-header img {
+        width: 6.78vw;
+        height: 6.78vw;
+    }
+
+    .card-header-name {
+        font-size: 2.26vw;
+        color: #DDDDDD;
+    }
+
+    .card-header-position {
+        font-size: 2.17vw;
+        color: #AAAAAA;
+    }
+
+    .card #cb1:checked~.content-box1 {
+        max-height: 45.8vw;
+    }
+
+    .card #cb2:checked~.content-box2 {
+        max-height: 45.8vw;
+    }
+
+    .card-content {
+        padding-bottom: 1.66vw;
+        padding-left: 2.4vw;
+        font-size: 2.26vw;
+    }
+
+    .card-vertical-line {
+        margin-left: 0.76vw;
+        margin-right: 1.5vw;
+    }
 }

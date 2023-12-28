@@ -20,7 +20,7 @@
 }
 
 .box3 {
-    opacity: 0;
+    opacity: 1;
 }
 
 .features-section {
@@ -225,11 +225,11 @@ input:checked~.toggle-button-css .slider {
 /* mobile responsive css */
 
 @media (max-width: 475px) {
-    .gradient-background {
+    /* .gradient-background {
         background: linear-gradient(to bottom, #03213B, #000101);
         top: 0px;
         height: 13.67vh;
-    }
+    } */
 
     .about .text {
         font-size: 6.67vw;
