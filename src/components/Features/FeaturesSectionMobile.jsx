@@ -57,19 +57,20 @@ const FeaturesSectionMobile = () => {
                 .to('.corporate', {
                     opacity: 0
                 }, '<')
+                .set('.left-button', {
+                    display: 'none',
+                })
+                .set('.right-button', {
+                    display: 'none',
+                })
                 .to('.features-carousel-container', {
                     height: '0vw',
                 }, '<')
-                .to('.left-button', {
-                    display: 'none',
-                }, "<")
-                .to('.right-button', {
-                    display: 'none',
-                }, "<")
                 .to(".grid-header", {
                     overflow: 'visible',
                     gap: '2.27vw',
                     backgroundColor: 'black',
+                    translateX: '-4.8vw'
                 }, '>')
                 .to('.news-box', {
                     backgroundColor: '#191919',
@@ -105,6 +106,7 @@ const FeaturesSectionMobile = () => {
                 .to('.grid-header', {
                     scale: '0.4',
                     gap: '4.25vw',
+                    duration: 3
                 }, '>')
                 .to('.news-box', {
                     contentVisibility: 'hidden',
@@ -131,8 +133,8 @@ const FeaturesSectionMobile = () => {
             ScrollTrigger.create({
                 trigger: ".grid-header",
                 start: 'top top',
-                end: "bottom+=100 top",
-                scrub: true,
+                end: 'bottom+=200 top',
+                scrub: 2,
                 animation: tl3,
                 pin: ".grid-header",
                 pinSpacing: false,
