@@ -1,46 +1,77 @@
+.mobile-outer-container {
+    position: relative;
+    height: 300vw;
+    width: 100vw;
+    padding-top: 5vw;
+    overflow: hidden;
+}
+
 .grid-header {
+    display: grid;
+    grid-template-columns: repeat(10, 21.7vw);
+    grid-template-rows: repeat(25, minmax(21.7vw, auto));
     width: 90.4vw;
     height: 15.73vw;
-    background-color: #333333;
+    overflow: hidden;
     font-family: 'Poppins-Regular';
     font-size: 3.2vw;
-    display: flex;
-    flex-direction: row;
     margin: auto;
     border-radius: 10px 10px 0px 0px;
     color: #DDDDDD;
-    justify-content: space-evenly;
+    gap: 1vw;
+    background-color: #333333;
+    scale: 1;
+    transform-origin: 0% 0%;
+}
+
+.mobile-grid-item {
+    width: 21.7vw;
+    height: 21.7vw;
+    background-color: #191919;
+    border-radius: 2.67vw;
+    opacity: 0;
 }
 
 .news-box {
+    width: 21.7vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding-top: 3.5vw;
+    background-color: #333333;
+    transition: all 0.2s ease-in;
 }
 
 .concalls-box {
+    width: 21.7vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding-top: 4vw;
+    background-color: #333333;
+    transition: all 0.2s ease-in;
 }
 
 .corporate-box {
+    width: 21.7vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding-top: 4vw;
+    background-color: #333333;
+    transition: all 0.2s ease-in;
 }
 
 .forensic-box {
+    width: 21.7vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 12vw;
+    padding-top: 3vw;
     text-align: center;
     font-size: 2.93vw;
+    background-color: #333333;
+    transition: all 0.2s ease-in;
 }
 
 .features-carousel-container {
@@ -69,7 +100,7 @@
     width: 6.8vw;
     height: 6.8vw;
     font-size: 4vw;
-    border-radius: 15px;
+    border-radius: 4vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -84,10 +115,40 @@
     width: 6.8vw;
     height: 6.8vw;
     font-size: 4vw;
-    border-radius: 15px;
+    border-radius: 4vw;
     display: flex;
     align-items: center;
     justify-content: center;
     color: black;
     cursor: pointer;
+}
+
+.mobile-footer {
+    position: relative;
+    height: 300vw;
+    width: 100vw;
+    z-index: -1;
+}
+
+.mobile-complexity-text {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    opacity: 0;
+    scale: 1;
+    top: 105vw;
+    font-size: 7.3vw;
+    z-index: 2;
+}
+
+.mobile-grid-email {
+    position: absolute;
+    top: 155vw;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    scale: 1;
 }
