@@ -134,17 +134,17 @@
     position: absolute;
     display: flex;
     justify-content: center;
+    top: 130vw;
     width: 100vw;
     opacity: 0;
     scale: 1;
-    top: 105vw;
     font-size: 7.3vw;
     z-index: 2;
 }
 
 .mobile-grid-email {
     position: absolute;
-    top: 155vw;
+    top: 180vw;
     width: 100vw;
     display: flex;
     flex-direction: column;
