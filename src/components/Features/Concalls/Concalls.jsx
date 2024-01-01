@@ -55,7 +55,7 @@ const Concalls = () => {
                             <div className='concall-lottie'>
                                 <Lottie
                                     lottieRef={concallRef}
-                                    animationData={ConcallAnimation}
+                                    animationData={JSON.parse(JSON.stringify(ConcallAnimation))}
                                     autoplay={true}
                                     loop={false}
                                 />

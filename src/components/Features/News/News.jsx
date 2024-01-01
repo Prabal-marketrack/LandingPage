@@ -30,7 +30,7 @@ const News = () => {
                 <div className="news-lottie">
                     <Lottie
                         lottieRef={newsRef}
-                        animationData={NewsAnimation}
+                        animationData={JSON.parse(JSON.stringify(NewsAnimation))}
                         autoplay={false}
                         loop={false}
                     />

@@ -59,7 +59,7 @@ const HeroForm = ({ fontSize, textColor, animationTime }) => {
             return;
         }
         try {
-            const response = await fetch('http://Marketrack-backend-env-1.eba-qjtmt2yc.ap-south-1.elasticbeanstalk.com/addOnboarded', {
+            const response = await fetch('https://api.marketrack.in/addOnboarded', {
                 method: "POST",
                 body: JSON.stringify({ email: email }),
                 headers: {
