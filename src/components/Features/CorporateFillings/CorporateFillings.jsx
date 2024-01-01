@@ -34,7 +34,7 @@ const CorporateFillings = () => {
                 {!showUIElement && <div className="corporate-lottie">
                     <Lottie
                         lottieRef={corporateRef}
-                        animationData={CorporateAnimation}
+                        animationData={JSON.parse(JSON.stringify(CorporateAnimation))}
                         autoplay={false}
                         loop={false}
                     />

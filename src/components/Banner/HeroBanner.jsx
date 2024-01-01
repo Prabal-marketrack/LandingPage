@@ -4,7 +4,9 @@ import HeroAnimation from "../../lotties/HeroAnimationCompressed.json";
 import './HeroBanner.css';
 import HeroForm from './EmailForm/HeroForm';
 import { useStateContext } from '../../context/StateContext';
-
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 const HeroBanner = () => {
     const { setBannerVisible } = useStateContext();
@@ -13,6 +15,7 @@ const HeroBanner = () => {
         setTimeout(() => {
             lottieRef.current.play();
             setBannerVisible(true);
+            ScrollTrigger.refresh();console.log("hello");
         }, 1000);
     }, [setBannerVisible]);
     return (
@@ -21,7 +24,7 @@ const HeroBanner = () => {
             <div className="animation-container ease-in-out">
                 <Lottie
                     lottieRef={lottieRef}
-                    animationData={HeroAnimation}
+                    animationData={JSON.parse(JSON.stringify(HeroAnimation))}
                     autoplay={false}
                     loop={true}
                 />
