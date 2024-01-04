@@ -11,19 +11,24 @@ const CorporateFillings = () => {
     const [showUIElement, setShowUIElement] = useState(false);
     const corporateRef = useRef(null);
     useEffect(() => {
+        let uiTimeout;
         if (isChecked) {
             corporateRef.current.setDirection(1);
             corporateRef.current.setSpeed(1);
             corporateRef.current.goToAndPlay(0, false);
             let duration = corporateRef.current.getDuration(false);
-            setTimeout(() => {
+            uiTimeout = setTimeout(() => {
                 setShowUIElement(true);
             }, (duration * 1000 + 100));
         }
         else if (isChecked === false) {
             setShowUIElement(false);
+            clearTimeout(uiTimeout);
         }
-    }, [setShowUIElement, isChecked]);
+        return () => {
+            clearTimeout(uiTimeout);
+        };
+    }, [isChecked]);
     return (
         <>
             <div className='corporate hide-lottie'>

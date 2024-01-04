@@ -13,9 +13,9 @@ const HeroBanner = () => {
     const lottieRef = useRef();
     useEffect(() => {
         setTimeout(() => {
-            lottieRef.current.play();
             setBannerVisible(true);
-            ScrollTrigger.refresh();console.log("hello");
+            ScrollTrigger.refresh();
+            console.log("hello");
         }, 1000);
     }, [setBannerVisible]);
     return (
@@ -25,7 +25,7 @@ const HeroBanner = () => {
                 <Lottie
                     lottieRef={lottieRef}
                     animationData={JSON.parse(JSON.stringify(HeroAnimation))}
-                    autoplay={false}
+                    autoplay={true}
                     loop={true}
                 />
             </div>

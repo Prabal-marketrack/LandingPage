@@ -1,0 +1,59 @@
+.team-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2.86vw auto;
+}
+
+.team-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.1vw;
+}
+
+.team-header-text {
+    position: relative;
+    color: #222;
+    animation-fill-mode: forwards;
+    opacity: 100%;
+}
+
+.team-header-text:nth-child(1):before {
+    content: attr(data-text);
+    position: absolute;
+    color: #FFFFFF;
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: center;
+    animation: animate 1s forwards;
+    animation-delay: 100ms;
+    animation-iteration-count: 1;
+}
+
+.team-header-text:nth-child(2):before {
+    content: attr(data-text);
+    position: absolute;
+    color: #FFFFFF;
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: center;
+    animation: animate 1.5s forwards;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+}
+
+@keyframes animate {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+        color: #fff;
+    }
+}

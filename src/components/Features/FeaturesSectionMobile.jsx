@@ -20,7 +20,7 @@ const tl3 = gsap.timeline();
 const FeaturesSectionMobile = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const { isChecked } = useStateContext();
-    const itemsArray = Array.from({ length: 246 }, (_, index) => index);
+    const itemsArray = Array.from({ length: 21 }, (_, index) => index);
     let totalCards = 4;
     const updateCarousel = (val) => {
         const carousel = document.getElementById('carousel');
@@ -99,6 +99,9 @@ const FeaturesSectionMobile = () => {
                 .to('.mobile-grid-item', {
                     opacity: 1,
                 }, '<')
+                .to('.hide-content', {
+                    opacity: 1,
+                }, ">")
                 .set('.mobile-footer', {
                     zIndex: 1,
                 })
@@ -108,20 +111,11 @@ const FeaturesSectionMobile = () => {
                     gap: '4.25vw',
                     duration: 3
                 }, '>')
-                .to('.news-box', {
-                    contentVisibility: 'hidden',
-                }, '<')
-                .to('.concalls-box', {
-                    contentVisibility: 'hidden',
-                }, '<')
-                .to('.corporate-box', {
-                    contentVisibility: 'hidden',
-                }, '<')
-                .to('.forensic-box', {
-                    contentVisibility: 'hidden',
+                .to('.hide-content', {
+                    opacity: 0,
                 }, '<')
                 .to('.mobile-complexity-text', {
-                    opacity: '1',
+                    opacity: 1,
                     scale: 1,
                 }, '>')
                 .to('.mobile-grid-email', {
@@ -154,25 +148,109 @@ const FeaturesSectionMobile = () => {
         <div className='mobile-outer-container' style={{ position: 'relative' }}>
             <div className="grid-header">
                 <div className="news-box" style={{ color: (currentIndex === 0) ? '#62C0FF' : '#DDDDDD' }}>
-                    <FaNewspaper style={{ fontSize: '5vw' }} />
-                    <span>News</span>
+                    <FaNewspaper className='hide-content' style={{ fontSize: '5vw' }} />
+                    <span className='hide-content'>News</span>
                 </div>
                 <div className="concalls-box" style={{ color: (currentIndex === 1) ? '#62C0FF' : '#DDDDDD' }}>
-                    <IoCall style={{ fontSize: '4vw' }} />
-                    <span>Concalls</span>
+                    <IoCall className='hide-content' style={{ fontSize: '4vw' }} />
+                    <span className='hide-content'>Concalls</span>
                 </div>
                 <div className="corporate-box" style={{ color: (currentIndex === 2) ? '#62C0FF' : '#DDDDDD' }}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="4vw" height="4vw" viewBox="0 0 20 16">
+                    <svg className='hide-content' xmlns="http://www.w3.org/2000/svg" width="4vw" height="4vw" viewBox="0 0 20 16">
                         <path id="Icon_awesome-scroll" data-name="Icon awesome-scroll" d="M1.5,0A1.5,1.5,0,0,0,0,1.5v2A.5.5,0,0,0,.5,4H3V1.5A1.5,1.5,0,0,0,1.5,0ZM8,12.893V11h9V3a3,3,0,0,0-3-3H3.487A2.476,2.476,0,0,1,4,1.5V13a2,2,0,0,0,2.336,1.972A2.074,2.074,0,0,0,8,12.893ZM9,12v1a3,3,0,0,1-3,3H16.5A3.5,3.5,0,0,0,20,12.5a.5.5,0,0,0-.5-.5Z" fill={(currentIndex === 2) ? '#62C0FF' : '#DDDDDD'} opacity="0.75" />
                     </svg>
-                    <span>Corp. Filings</span>
+                    <span className='hide-content'>Corp. Filings</span>
                 </div>
                 <div className="forensic-box" style={{ color: (currentIndex === 3) ? '#62C0FF' : '#DDDDDD' }}>
-                    <FaSearch />
-                    <span>Forensic Checks</span>
+                    <FaSearch className='hide-content' />
+                    <span className='hide-content'>Forensic Checks</span>
                 </div>
-                {itemsArray.map((item) => (
-                    <div key={item} className="mobile-grid-item"></div>
+                <div className="mobile-grid-item"></div>
+                <div className="mobile-grid-item"></div>
+                <div className="mobile-grid-item"></div>
+                <div className="mobile-grid-item"></div>
+                <div className="mobile-grid-item"></div>
+                <div className="mobile-grid-item"></div>
+                <div className="mobile-grid-item"><span className='hide-content'>Valuation</span></div>
+                <div className="mobile-grid-item">
+                    <span className='hide-content'>Mutual</span>
+                    <span className='hide-content'>Funds</span>
+                </div>
+                <div className="mobile-grid-item">
+                    <span className='hide-content'>Supply</span>
+                    <span className='hide-content'>Chains</span>
+                </div>
+                <div className="mobile-grid-item"><span className='hide-content'>Forex</span></div>
+                <div className="mobile-grid-item"></div>
+                <div className="mobile-grid-item"></div>
+                <div className="mobile-grid-item"></div>
+                <div className="mobile-grid-item"></div>
+                <div className="mobile-grid-item"></div>
+                <div className="mobile-grid-item"></div>
+                <div className="mobile-grid-item"><span className='hide-content'>Trade</span></div>
+                <div className="mobile-grid-item">
+                    <span className='hide-content'>Govt.</span>
+                    <span className='hide-content'>Data</span>
+                </div>
+                <div className="mobile-grid-item">
+                    <span className='hide-content'>Alternate</span>
+                    <span className='hide-content'>Data</span>
+                </div>
+                <div className="mobile-grid-item"><span className='hide-content'>KPIs</span></div>
+                <div className="mobile-grid-item"></div>
+                <div className="mobile-grid-item"></div>
+                <div className="mobile-grid-item"></div>
+                <div className="mobile-grid-item"></div>
+                <div className="mobile-grid-item"></div>
+                <div className="mobile-grid-item"></div>
+                <div className="mobile-grid-item">
+                    <span className='hide-content'>Annual</span>
+                    <span className='hide-content'>Report</span>
+                </div>
+                <div className="mobile-grid-item">
+                    <span className='hide-content'>Raw</span>
+                    <span className='hide-content'>Materials</span>
+                </div>
+                <div className="mobile-grid-item"><span className='hide-content'>Employees</span></div>
+                <div className="mobile-grid-item"><span className='hide-content'>Sentiment</span></div>
+                <div className="mobile-grid-item"></div>
+                <div className="mobile-grid-item"></div>
+                <div className="mobile-grid-item"></div>
+                <div className="mobile-grid-item"></div>
+                <div className="mobile-grid-item"></div>
+                <div className="mobile-grid-item"></div>
+                {itemsArray.map((item) => (<>
+                    <div className="mobile-grid-item">
+                        <div className="skeleton-block hide-content">
+                            <div className='skeleton-1'></div>
+                            <div className='skeleton-2'></div>
+                        </div>
+                    </div>
+                    <div className="mobile-grid-item">
+                        <div className="skeleton-block hide-content">
+                            <div className='skeleton-1'></div>
+                            <div className='skeleton-2'></div>
+                        </div>
+                    </div>
+                    <div className="mobile-grid-item">
+                        <div className="skeleton-block hide-content">
+                            <div className='skeleton-1'></div>
+                            <div className='skeleton-2'></div>
+                        </div>
+                    </div>
+                    <div className="mobile-grid-item">
+                        <div className="skeleton-block hide-content">
+                            <div className='skeleton-1'></div>
+                            <div className='skeleton-2'></div>
+                        </div>
+                    </div>
+                    <div className="mobile-grid-item"></div>
+                    <div className="mobile-grid-item"></div>
+                    <div className="mobile-grid-item"></div>
+                    <div className="mobile-grid-item"></div>
+                    <div className="mobile-grid-item"></div>
+                    <div className="mobile-grid-item"></div>
+                </>
                 ))}
             </div>
             <div className="features-carousel-container" style={{ height: (isChecked && (currentIndex === 1)) ? '130vw' : '100vw' }}>

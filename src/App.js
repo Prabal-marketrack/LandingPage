@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
-import Home from './components/Home';
+import Home from './pages/Home';
+import Navbar from './components/Navbar/Navbar';
+import Team from './pages/Team';
 import {
   BrowserRouter as Router,
   Routes,
@@ -12,9 +14,11 @@ const App = () => {
   return (
     <StateContext>
       <div>
+        <Navbar />
         <Router>
           <Routes>
             <Route exact path='/' element={<Home />} />
+            <Route path='/team' element={<Team/>}/>
           </Routes>
         </Router>
       </div>
