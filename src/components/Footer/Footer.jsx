@@ -10,8 +10,9 @@ import { IoLogoDiscord } from "react-icons/io5";
 import { Tooltip } from 'react-tooltip';
 
 const Footer = () => {
-    return (
-        <section className='footer-section'>
+    const windowWidth = window.innerWidth;
+    return (<>
+        {(windowWidth > 600) && <section className='footer-section'>
             <div className="footer-container">
                 <div className="quicklinks">
                     <Link to={'#'} className="footer-link">ABOUT</Link>
@@ -37,15 +38,52 @@ const Footer = () => {
                 <div className="footer-line">
                     <hr />
                     <div className="footer-line-links">
-                        <Link style={{textDecoration: 'none', color: "#fff"}}>Copyright &copy; 2023 Marketrack. All Rights Reserved</Link>
-                        <Link style={{textDecoration: 'none', color: "#fff"}}>Privacy Policy</Link>
-                        <Link style={{textDecoration: 'none', color: "#fff"}}>Terms of Use</Link>
-                        <Link style={{textDecoration: 'none', color: "#fff"}}>Cookie Policy</Link>
-                        <Link style={{textDecoration: 'none', color: "#fff"}}> Marketrack, Dellarex Technologies Pvt Ltd.</Link>
+                        <Link style={{ textDecoration: 'none', color: "#fff" }}>Copyright &copy; 2023 Marketrack. All Rights Reserved</Link>
+                        <Link style={{ textDecoration: 'none', color: "#fff" }}>Privacy Policy</Link>
+                        <Link style={{ textDecoration: 'none', color: "#fff" }}>Terms of Use</Link>
+                        <Link style={{ textDecoration: 'none', color: "#fff" }}>Cookie Policy</Link>
+                        <Link style={{ textDecoration: 'none', color: "#fff" }}> Marketrack, Dellarex Technologies Pvt Ltd.</Link>
                     </div>
                 </div>
             </div>
-        </section>
+        </section>}
+        {(windowWidth <= 600) && <section className='footer-section'>
+            <div className="footer-container">
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '8.5vw' }}>
+                    <div className='social-links-heading'>
+                        <hr />
+                        <span>STAY IN TOUCH</span>
+                        <hr />
+                    </div>
+                    <div className="social-links">
+                        <a style={{ color: '#fff' }} href={'/'} data-tooltip-id='social-link-tooltip' data-tooltip-content='X' data-tooltip-place="bottom"><FaTwitter /></a>
+                        <a style={{ color: '#fff' }} href={'/'} data-tooltip-id='social-link-tooltip' data-tooltip-content='Instagram' data-tooltip-place="bottom"><FaInstagram /></a>
+                        <a style={{ color: '#fff' }} href={'/'} data-tooltip-id='social-link-tooltip' data-tooltip-content='Facebook' data-tooltip-place="bottom"><FaFacebookF /></a>
+                        <a style={{ color: '#fff' }} href={'/'} data-tooltip-id='social-link-tooltip' data-tooltip-content='Youtube' data-tooltip-place="bottom"><FaYoutube /></a>
+                        <a style={{ color: '#fff' }} href={'/'} data-tooltip-id='social-link-tooltip' data-tooltip-content='LinkedIn' data-tooltip-place="bottom"><FaLinkedin /></a>
+                        <a style={{ color: '#fff' }} href={'/'} data-tooltip-id='social-link-tooltip' data-tooltip-content='Discord' data-tooltip-place="bottom"><IoLogoDiscord /></a>
+                        {/* <Tooltip id="social-link-tooltip" /> */}
+                    </div>
+                </div>
+                <div className="quicklinks">
+                    <Link to={'#'} className="footer-link">BLOG</Link>
+                    <Link to={'#'} className="footer-link">ABOUT</Link>
+                    <Link to={'#'} className="footer-link">CONTACT US</Link>
+                    <Link to={'#'} className="footer-link">CAREERS</Link>
+                    <Link to={'#'} className="footer-link">TEAM</Link>
+                </div>
+                <div className="footer-line">
+                    <div className="footer-line-links">
+                        <Link style={{ textDecoration: 'none', color: "#fff" }}>Privacy Policy</Link>
+                        <Link style={{ textDecoration: 'none', color: "#fff" }}>Terms of Use</Link>
+                        <Link style={{ textDecoration: 'none', color: "#fff" }}>Cookie Policy</Link>
+                    </div>
+                    <hr />
+                    <span>Copyright &copy; 2023 Marketrack. All Rights Reserved</span>
+                </div>
+            </div>
+        </section>}
+    </>
     )
 }
 

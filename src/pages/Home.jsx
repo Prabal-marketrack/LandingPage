@@ -5,13 +5,13 @@ import Features from '../components/Features/Features';
 import Footer from '../components/Footer/Footer';
 
 const Home = () => {
-    
+    const windowWidth = window.innerWidth;
     return (
         <div className='bg-gradient'>
             <Header />
             <HeroBanner />
             <Features/>
-            <Footer/>
+            {(windowWidth<=600) && <Footer/>}
         </div>
     );
 }

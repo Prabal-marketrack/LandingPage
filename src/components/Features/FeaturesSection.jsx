@@ -8,6 +8,7 @@ import { useStateContext } from '../../context/StateContext';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import React, { useLayoutEffect } from 'react';
+import Footer from '../Footer/Footer';
 
 gsap.registerPlugin(ScrollTrigger);
 const tl1 = gsap.timeline();
@@ -75,7 +76,7 @@ const FeaturesSection = () => {
                     opacity: 1,
                 }, ">")
                 .to('.grid-container', {
-                    scale: 0.26*scaleRatio,
+                    scale: 0.25*scaleRatio,
                     gap: '2.78vw',
                 }, "<")
                 .set('.footer', {
@@ -102,7 +103,7 @@ const FeaturesSection = () => {
             ScrollTrigger.create({
                 trigger: ".forensic-section",
                 start: 'bottom+=100 bottom-=50',
-                end: "bottom bottom",
+                end: "bottom-=100 bottom",
                 endTrigger: ".footer",
                 scrub: true,
                 animation: tl1,
@@ -543,6 +544,7 @@ const FeaturesSection = () => {
                 <div className='grid-email'>
                     <HeroForm fontSize={'1.56vw'} textColor={'#A5FF95'} animationTime={'2.5s'} />
                 </div>
+                <Footer/>
             </div>
         </>
     );
