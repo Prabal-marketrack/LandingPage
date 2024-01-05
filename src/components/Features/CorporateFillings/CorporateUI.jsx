@@ -46,11 +46,11 @@ const CorporateUI = () => {
                     </div>
                     <div className='filing-files'>
                         <div className="file-pdf" onMouseEnter={() => setPdfText2(true)} onMouseLeave={() => { setPdfText2(false) }}>
-                        <Link to="https://nsearchives.nseindia.com/corporate/DEEPAKNTR_02072022182642_NSENDS2722.pdf" target='_blank'><img src={PDFLogo} alt="" /></Link>
+                            <Link to="https://nsearchives.nseindia.com/corporate/DEEPAKNTR_02072022182642_NSENDS2722.pdf" target='_blank'><img src={PDFLogo} alt="" /></Link>
                             {pdfText2 && <span className='file-text'>View Full Disclosure</span>}
                         </div>
                         <div className="file-pdf file-pdf-3" onMouseEnter={() => setPdfText3(true)} onMouseLeave={() => { setPdfText3(false) }}>
-                        <Link to="https://www.bseindia.com/xml-data/corpfiling/AttachHis/f8f70871-4bb4-4764-b69f-497a75635010.pdf" target='_blank'><img src={PDFLogo} alt="" /></Link>
+                            <Link to="https://www.bseindia.com/xml-data/corpfiling/AttachHis/f8f70871-4bb4-4764-b69f-497a75635010.pdf" target='_blank'><img src={PDFLogo} alt="" /></Link>
                             {pdfText3 && <span className='file-text'>View Full Disclosure</span>}
                         </div>
                     </div>

@@ -13,13 +13,13 @@
     gap: 1.9vw;
     padding-left: 6vw;
     /* padding-top: 40.36vw; */
-    transform-origin: 0% 100%;
+    transform-origin: 0% 99%;
     /* animation: scaleIn 10s forwards 10s; */
 }
 
 .footer {
     position: relative;
-    height: 400vw;
+    height: 370vw;
     width: 100vw;
     z-index: -1;
     /* background-color: red; */
@@ -116,4 +116,20 @@
     align-items: center;
     opacity: 0;
     scale: 1;
+}
+
+@media (max-width: 600px){
+    .skeleton-block{
+        gap: 3vw;
+    }
+    .skeleton-1{
+        width: 15vw;
+        height: 3.5vw;
+        transform: scale(1);
+    }
+    .skeleton-2{
+        width: 12vw;
+        height: 3.5vw;
+        transform: scale(1);
+    }
 }

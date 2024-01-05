@@ -20,11 +20,11 @@ const invalidateTL = () => {
 const FeaturesSection = () => {
     const { isChecked } = useStateContext();
     const windowHeight = window.innerHeight;
-    const scaleValue = 0.11 * windowHeight / 730;
+    const scaleRatio = windowHeight / 730;
     // let main = document.querySelector(".about");
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
-            console.log(scaleValue);
+            console.log(scaleRatio);
             tl1
                 .addLabel("start")
                 .to('.news-lottie', {
@@ -75,7 +75,7 @@ const FeaturesSection = () => {
                     opacity: 1,
                 }, ">")
                 .to('.grid-container', {
-                    scale: 0.26,
+                    scale: 0.26*scaleRatio,
                     gap: '2.78vw',
                 }, "<")
                 .set('.footer', {
@@ -83,7 +83,7 @@ const FeaturesSection = () => {
                 })
                 .addLabel("scaled")
                 .to('.grid-container', {
-                    scale: scaleValue,
+                    scale: 0.11*scaleRatio,
                     gap: '4.17vw',
                 }, ">")
                 .to('.hide-everything', {
@@ -118,7 +118,7 @@ const FeaturesSection = () => {
         });
 
         return () => ctx.revert();
-    }, [scaleValue]);
+    }, [scaleRatio]);
 
     return (
         <>

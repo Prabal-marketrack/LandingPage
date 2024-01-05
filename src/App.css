@@ -101,7 +101,7 @@ hr {
 
 .bg-gradient {
   height: 100vw;
-  background: linear-gradient(to bottom, #000101 48vw, #03213B, #000101);
+  background: linear-gradient(to bottom, #000101 38vw, #03213B, #000101);
 }
 
 .skeleton-text {
@@ -117,7 +117,7 @@ hr {
 
 @media (max-width: 600px) {
   .bg-gradient {
-    height: 250vw;
-    background: linear-gradient(to bottom, #000101 85vw, #03213B, #000101);
+    height: 223vw;
+    background: linear-gradient(to bottom, #000101 48vw, #03213B, #000101);
   }
 }
