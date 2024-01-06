@@ -19,7 +19,7 @@
 
 .footer {
     position: relative;
-    height: 370vw;
+    height: 400vw;
     width: 100vw;
     z-index: -1;
     /* background-color: red; */
@@ -98,7 +98,7 @@
     position: absolute;
     opacity: 0;
     scale: 1;
-    top: 90%;
+    top: 88%;
     left: 27vw;
     font-size: 3.65vw;
     z-index: 2;
@@ -107,7 +107,7 @@
 .grid-email {
     z-index: 2;
     position: absolute;
-    top: 92%;
+    top: 90%;
     width: 37.5vw;
     height: 9.51vw;
     left: 31vw;
