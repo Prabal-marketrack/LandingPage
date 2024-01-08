@@ -268,9 +268,13 @@ input:-internal-autofill-selected {
         padding: 2.4vw;
     }
 
+    .hero-form-button:hover {
+        background-color: #278AFF;
+    }
+
     .hero-form-button:hover .arrow-icon {
-        font-size: 4vw;
-        padding: 2vw;
+        font-size: 3.1vw;
+        padding: 2.4vw;
     }
 
     .default-message {

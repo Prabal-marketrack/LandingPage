@@ -22,6 +22,9 @@
 .box3 {
     opacity: 0;
 }
+.box-4{
+    opacity: 0;
+}
 
 .features-section {
     padding-top: 5.55vw;
@@ -90,44 +93,16 @@
 /* About text with typewriter animation */
 
 .typewriter {
-    color: #fff;
-    opacity: 1;
+    color: #707070;
     overflow: hidden;
+    width: 0;
     white-space: nowrap;
-    animation: typing 1.5s linear;
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-        color: #707070;
-    }
-
-    to {
-        width: 100%;
-        color: #707070;
-    }
 }
 
 .pointer {
-    opacity: 1;
     scale: 1;
-    animation: pointer-animation 0.4s linear 1.5s;
 }
 
-@keyframes pointer-animation {
-    0% {
-        scale: 1;
-    }
-
-    50% {
-        scale: 70%;
-    }
-
-    100% {
-        scale: 1;
-    }
-}
 
 /* About text with typewriter animation ends*/
 
