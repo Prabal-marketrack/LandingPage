@@ -77,7 +77,7 @@ const FeaturesSection = () => {
                     opacity: 1,
                 }, ">")
                 .to('.grid-container', {
-                    scale: 0.26*scaleRatio2,
+                    scale: 0.26 * scaleRatio2,
                     gap: '2.78vw',
                 }, "<")
                 .set('.footer', {
@@ -85,7 +85,7 @@ const FeaturesSection = () => {
                 })
                 .addLabel("scaled")
                 .to('.grid-container', {
-                    scale: 0.11*scaleRatio1,
+                    scale: 0.11 * scaleRatio1,
                     gap: '4.17vw',
                 }, ">")
                 .to('.hide-everything', {
@@ -486,7 +486,7 @@ const FeaturesSection = () => {
                     <div className="grid-item"></div>
                     <div className="grid-item"></div>
                     <div className="grid-item"></div>
-                    <div className="corporate-section" style={{ top: isChecked? '-22vw':'-7.5vw' }}><CorporateFillings /></div>
+                    <div className="corporate-section" style={{ top: isChecked ? '-22vw' : '-7.5vw' }}><CorporateFillings /></div>
                     <div className="forensic-section"><Forensic /></div>
                     <div className="grid-item triggerClass"><span className='hide-everything'>Employees</span></div>
                     <div className="grid-item"><span className='hide-everything'>Sentiment</span></div>
@@ -545,7 +545,7 @@ const FeaturesSection = () => {
                 <div className='grid-email'>
                     <HeroForm fontSize={'1.56vw'} textColor={'#A5FF95'} animationTime={'2.5s'} />
                 </div>
-                <Footer/>
+                <Footer />
             </div>
         </>
     );

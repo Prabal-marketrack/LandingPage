@@ -32,6 +32,7 @@
     text-decoration: underline;
     text-decoration-color: #278AFF;
     text-decoration-thickness: 2px;
+    -webkit-text-stroke: 0.5px #fff;
 }
 
 .social-links-heading {
@@ -118,6 +119,7 @@
 
     .footer-link:hover {
         text-decoration: none;
+        -webkit-text-stroke: none;
     }
 
     .footer-line {

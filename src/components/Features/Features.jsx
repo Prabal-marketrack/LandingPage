@@ -10,32 +10,12 @@ import { ScrollTrigger } from 'gsap/all';
 import FeaturesSectionMobile from './FeaturesSectionMobile';
 
 gsap.registerPlugin(ScrollTrigger);
+const tl2 = gsap.timeline();
 
 const Features = () => {
     const windowWidth = window.innerWidth;
     const { isBannerVisible, setLottiePlay } = useStateContext();
     const tl = useRef();
-    const [isTypingTriggered, setTypingTriggered] = useState(false);
-    const handleScroll = () => {
-        const element = document.getElementById('typing-trigger');
-        const elementPosition = element.getBoundingClientRect();
-        const windowHeight = window.innerHeight - 150;
-        const triggerPoint = windowHeight;
-
-        if (elementPosition.bottom <= triggerPoint) {
-            setTypingTriggered(true);
-        } else {
-            setTypingTriggered(false);
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    });
-
     useLayoutEffect(() => {
         const ctx = gsap.context(() => {
             tl.current = gsap.timeline({
@@ -54,7 +34,11 @@ const Features = () => {
                     onEnterBack: () => {
                         setLottiePlay(false);
                     },
-
+                    onEnter: ()=>{
+                        gsap.set('.box-4', {
+                            opacity: 0,
+                        })
+                    }
                 }
             })
                 .to(".box1", {
@@ -77,6 +61,52 @@ const Features = () => {
         return () => ctx.revert();
     }, [setLottiePlay, windowWidth]);
 
+    useLayoutEffect(() => {
+        let ctx = gsap.context(() => {
+            tl2
+                .set('.box-4', {
+                    opacity: 0,
+                })
+                .to('.box-4', {
+                    opacity: 1,
+                    duration: 0.3
+                })
+                .to('.typewriter', {
+                    width: '100%',
+                    duration: 1.5
+                }, ">")
+                .to('.typewriter', {
+                    color: '#fff',
+                }, ">")
+                .to(".pointer", {
+                    scale: 0.7,
+                    duration: 0.2,
+                }, ">")
+                .to(".pointer", {
+                    scale: 1,
+                    duration: 0.2,
+                }, ">")
+
+            ScrollTrigger.create({
+                id: "typing_anim",
+                trigger: "#typing-trigger",
+                start: "top 90%",
+                markers: false,
+                invalidateOnRefresh: true,
+                onEnter: () => {
+                    tl2.progress(0);
+                    tl2.play();
+                },
+                onLeaveBack: ()=>{
+                    gsap.set('.box-4', {
+                        opacity: 0
+                    })
+                }
+            })
+        });
+        return () => ctx.revert();
+    }, []);
+
 
 
     return (
@@ -84,13 +114,13 @@ const Features = () => {
             <div className='features-section'>
                 <div className='fade_rule'></div>
                 <div className='features-body'>
-                    <div className='about' >
+                    <div className='about'>
                         <div className="heading-container text box1">
                             With <h1 className="brand-heading text">MARKETRACK</h1>
                         </div>
-                        <div className='text about-text' id='typing-trigger' style={{ opacity: isTypingTriggered ? '1' : '0' }}>
-                            {isTypingTriggered && <span className='pr-20 typewriter'>Leave Complexity Behind with Just One Click</span>}
-                            {isTypingTriggered && <BiSolidPointer className='pointer' />}
+                        <div className='box-4 text about-text ' id='typing-trigger'>
+                            <span className='pr-20 typewriter'>Leave Complexity Behind with Just One Click</span>
+                            <BiSolidPointer className='pointer' />
                         </div>
                         <div className='vertical-line'></div>
                         <div className='exclusive flex-col box2'>
